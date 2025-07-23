@@ -8,17 +8,17 @@ export default function Experience() {
     {
       title: "Full Stack Blog",
       image: "/placeholder.svg?height=280&width=400",
-      link: "https://example.com/fullstack-blog",
+      link: "https://tech-wealth.vercel.app",
     },
     {
       title: "Landing Page SocialClubs",
       image: "/placeholder.svg?height=280&width=400",
-      link: "https://example.com/socialclubs-landing",
+      link: "landing-page01-ochre.vercel.app",
     },
     {
       title: "AI Dating Chat App",
       image: "/placeholder.svg?height=280&width=400",
-      link: "https://example.com/ai-dating-app",
+      link: "https://sadi-chats.vercel.app",
     },
   ]
 

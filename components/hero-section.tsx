@@ -7,15 +7,14 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 export default function HeroSection() {
-  const handleDownloadCV = () => {
-    const link = document.createElement("a")
-    link.href = "/cv-roger-oria.pdf"
-    link.download = "CV-Roger-Oria.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-
+    const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/RogerCV.pdf";           // apunta al PDF en public/
+    link.download = "RogerCV.pdf";        // nombre que tendrá al descargar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <motion.section
       initial={{ opacity: 0 }}

@@ -20,7 +20,7 @@ async function main() {
     // Usa el modelo gemini-embedding-001 que funciona con la API Key de AI Studio.
     // Aunque el paquete es "GoogleGenerativeAIEmbeddings", el modelo se especifica aquí.
     model: "gemini-embedding-001",
-    apiKey: "AIzaSyCUPL_qg4qyUbzW9il3ost5cJwdfLUuxRA", // Usa tu nombre de variable de entorno existente
+    apiKey: process.env.GOOGLE_API_KEY, // Usa tu nombre de variable de entorno existente
   });
 
   const vector = await embeddings.embedQuery(text);

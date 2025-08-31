@@ -33,9 +33,9 @@ import {
   SiGit,
   SiGithub,
   SiPython,
-  SiExpress,
+  SiFastapi,
   SiMongodb,
-  SiFigma,
+  SiN8N,
 } from "react-icons/si"
 
 interface TypeSkillProps {
@@ -87,9 +87,9 @@ const marketingSkillsIconMap: Record<string, React.ReactNode> = {
 }
 
 const learningSkillsIconMap: Record<string, React.ReactNode> = {
-  expressjs: <SiExpress className="h-6 w-6 text-gray-600" />,
+  fastapi: <SiFastapi className="h-6 w-6 text-gray-600" />,
   mongodb: <SiMongodb className="h-6 w-6 text-green-500" />,
-  figma: <SiFigma className="h-6 w-6 text-purple-500" />,
+  n8n: <SiN8N className="h-6 w-6 text-purple-500" />,
 }
 
 // Agregar un mapa de iconos para categorías
@@ -101,9 +101,9 @@ const categoryIcons: Record<string, React.ReactNode> = {
   Learning: <GraduationCap className="h-7 w-7" />,
 }
 
-export default function TypeSkill({ title, skills, isLast = false }: TypeSkillProps) {
+export default function TypeSkill({ title, skills,  }: TypeSkillProps) {
   const getIconForSkill = (skillName: string, category: string) => {
-    const normalizedName = skillName.toLowerCase().replace(/[^a-z]/g, "")
+    const normalizedName = skillName.toLowerCase().replace(/[^a-z0-9]/g, "")
 
     switch (category) {
       case "Technical":

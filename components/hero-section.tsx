@@ -97,7 +97,7 @@ export default function HeroSection() {
           className="flex-1"
         >
           <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed mb-6">
-            I'm a passionate developer focused on creating innovative and scalable solutions. As CEO of my own startup,
+            I'm a passionate developer focused on creating innovative and scalable solutions. As founder of my own startup,
             I combine technical skills with business vision to build products that truly impact people's lives. My focus
             is on full-stack development with modern technologies.
           </p>
@@ -134,7 +134,7 @@ export default function HeroSection() {
         >
           <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
             <Image
-              src="/placeholder.svg?height=200&width=200"
+              src="/Roger.webp?height=200&width=200"
               alt="Roger Oria"
               width={200}
               height={200}

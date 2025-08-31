@@ -43,7 +43,7 @@ export default function Skills() {
     { name: "Campaign Strategies" },
   ]
 
-  const learningSkills = [{ name: "Express.js" }, { name: "MongoDB" }, { name: "Figma" }]
+  const learningSkills = [{ name: "Fast API" }, { name: "MongoDB" }, { name: "n8n" }]
 
   return (
     <motion.section

@@ -5,10 +5,11 @@ import SectionTitle from "./section-title"
 
 export default function OpenWork() {
   const workOptions = [
+      { title: "Product Engineer", highlighted: true },
     { title: "Frontend Developer", highlighted: false },
     { title: "Fullstack Developer (Supabase)", highlighted: false },
     { title: "Technology Consultant", highlighted: false },
-    { title: "Build Landing Page End to End", highlighted: true },
+    { title: "Build Landing Page End to End", highlighted: false },
     { title: "Work in a Startup", highlighted: true },
   ]
 
@@ -41,7 +42,7 @@ export default function OpenWork() {
             >
               {option.highlighted && (
                 <motion.div className="text-primary" whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                  {option.title.includes("Landing") ? (
+                  {option.title.includes("Product") ? (
                     <Star className="h-6 w-6 sm:h-7 sm:w-7" />
                   ) : (
                     <Rocket className="h-6 w-6 sm:h-7 sm:w-7" />

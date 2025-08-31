@@ -24,9 +24,12 @@ Si la pregunta solicita un tipo específico de información (ej. "habilidades bl
 Contexto:
 {context}
 
-Responde siempre en el mismo idioma de la pregunta.
+
+Usa tu creatividad y comenta un poco sobre lo que te pregunten aportando tu propio razonamiento a partir de la informacion dada
+Si lo que te preguntan tiene relacion con el contexto pero llegas a un punto que te quedas sin informacion debes incentivar al usuario a que para mas informacion se comunique con Roger directamente
 Si la pregunta no tiene relación con el contexto O no puedes extraer la información pedida específicamente del contexto
-, responde: "Eso escapa de mi entendimiento".
+, responde "This question is out my knowledge" segun el idioma en que te preguntan.
+Responde siempre en el mismo idioma de la pregunta.
 `;
 
 export async function POST(request: Request) {
@@ -49,7 +52,7 @@ export async function POST(request: Request) {
     }
 
     // Cargar embedding guardado localmente
-    const filePath = path.resolve(process.cwd(), "public/vector-web.json");
+    const filePath = path.resolve(process.cwd(), "public/vector-web2.json");
     const raw = readFileSync(filePath, "utf-8");
     const { text, embedding }: { text: string; embedding: number[] } = JSON.parse(raw);
 
@@ -85,7 +88,7 @@ export async function POST(request: Request) {
     const chain = prompt.pipe(chat);
 
     // Invocar con variables para prompt PASANDO context y question SEPARADOS
-    // Ahora sí pasamos context explícitamente para reemplazar {context} en system
+    // pasamos context explícitamente para reemplazar {context} en system
     const response = await chain.invoke({
       context,
       question,

@@ -29,9 +29,9 @@ export default function ProjectCard({ title, image, link }: ProjectCardProps) {
             <Image
               src={image || "/placeholder.svg"}
               alt={title}
-              width={400}
+              width={600}
               height={280}
-              className="w-full h-56 sm:h-64 md:h-72 object-cover transition-transform duration-300 hover:scale-110"
+              className="w-full h-56 sm:h-64 md:h-72 object-contain transition-transform duration-300 hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
           </div>

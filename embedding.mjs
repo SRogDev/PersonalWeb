@@ -26,7 +26,7 @@ async function main() {
   const vector = await embeddings.embedQuery(text);
 
   writeFileSync(
-    "public/embedding-web-gemini-langchain.json", // Cambia el nombre del archivo de salida para evitar conflictos
+    "public/vector-web2.json", // Cambia el nombre del archivo de salida para evitar conflictos
     JSON.stringify({ text, embedding: vector }, null, 2)
   );
 

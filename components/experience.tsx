@@ -7,19 +7,30 @@ export default function Experience() {
   const projects = [
     {
       title: "Full Stack Blog",
-      image: "/placeholder.svg?height=280&width=400",
+      image: "/tech-wealth.jpg?height=498&width=880",
       link: "https://tech-wealth.vercel.app",
     },
     {
-      title: "Landing Page SocialClubs",
-      image: "/placeholder.svg?height=280&width=400",
+      title: "Landing Page",
+      image: "/landing.jpg?height=280&width=400",
       link: "landing-page01-ochre.vercel.app",
     },
     {
       title: "AI Dating Chat App",
-      image: "/placeholder.svg?height=280&width=400",
+      image: "/sadi-chats.jpg?height=280&width=400",
       link: "https://sadi-chats.vercel.app",
     },
+     {
+      title: "Book platform",
+      image: "/deep-books.jpg?height=280&width=400",
+      link: "https://deep-books.vercel.app",
+    },
+     {
+      title: "Fitness AI",
+      image: "/mentzer.jpg?height=280&width=400",
+      link: "https://mentzer.vercel.app",
+    },
+
   ]
 
   return (
@@ -53,8 +64,8 @@ export default function Experience() {
             className="absolute right-0 top-1/2 h-0.5 bg-primary"
           ></motion.div>
           <p className="text-muted-foreground text-center px-8 sm:px-12 leading-relaxed text-lg sm:text-xl">
-            As CEO of my startup, I lead the development of innovative products that combine cutting-edge technology
-            with exceptional user experiences. My focus is on creating scalable solutions that solve real problems.
+            As founder of my startup, I lead the development of innovative social media that combine cutting-edge technology
+            with exceptional user experiences. My focus is on creating scalable solutions that solve real problems and empowers the people
           </p>
         </div>
       </motion.div>

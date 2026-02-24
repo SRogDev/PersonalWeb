@@ -25,7 +25,7 @@ export default function SectionTitle({ children, className = "" }: SectionTitleP
         whileInView={{ width: "100px" }}
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true }}
-        className="h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 mx-auto rounded-full"
+        className="h-0.5 bg-gradient-to-r from-accent/30 via-accent to-accent/30 mx-auto rounded-full"
       />
     </div>
   )

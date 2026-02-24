@@ -5,7 +5,7 @@ import SectionTitle from "./section-title"
 
 export default function OpenWork() {
   const workOptions = [
-      { title: "Product Engineer", highlighted: true },
+    { title: "Product Engineer", highlighted: true },
     { title: "Frontend Developer", highlighted: false },
     { title: "Fullstack Developer (Supabase)", highlighted: false },
     { title: "Technology Consultant", highlighted: false },
@@ -38,7 +38,7 @@ export default function OpenWork() {
                 x: 10,
                 transition: { duration: 0.2 },
               }}
-              className="flex items-center gap-4 p-4 sm:p-6 rounded-xl bg-card/30 border border-border/50 hover:border-primary/50 hover:bg-card/50 cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+              className="flex items-center gap-4 p-4 sm:p-6 rounded-xl bg-card/30 border border-border/50 hover:border-accent/50 hover:bg-card/50 cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-accent/10"
             >
               {option.highlighted && (
                 <motion.div className="text-primary" whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
@@ -63,7 +63,7 @@ export default function OpenWork() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: false }}
-          className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 sm:p-8 border border-primary/20 shadow-lg"
+          className="bg-gradient-to-r from-accent/10 to-primary/5 rounded-xl p-6 sm:p-8 border border-accent/20 shadow-lg"
         >
           <div className="flex items-start gap-3 mb-6">
             <Target className="h-6 w-6 text-primary mt-1 flex-shrink-0" />

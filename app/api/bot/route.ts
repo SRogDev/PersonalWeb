@@ -1,111 +1,92 @@
-// app/api/ask/route.ts
-import { NextResponse } from "next/server";
-import { readFileSync } from "fs";
-import path from "path";
+import { streamText } from "ai"
+import { google } from "@ai-sdk/google"
+import { readFileSync } from "fs"
+import path from "path"
 
-import {
-  GoogleGenerativeAIEmbeddings,
-  ChatGoogleGenerativeAI,
-} from "@langchain/google-genai";
-import { MemoryVectorStore } from "langchain/vectorstores/memory";
-import { ChatPromptTemplate } from "@langchain/core/prompts";
-
-interface RequestBody {
-  question?: string;
+// ── Types ────────────────────────────────────────────────────────────────────
+interface VectorRecord {
+  id: string
+  source: string
+  text: string
+  embedding: number[]
 }
 
-const SYSTEM_PROMPT = `
-Eres un asistente experto que responde preguntas basándose SÓLO en la información directamente relevante
- proporcionada en este contexto. 
-Si la pregunta solicita un tipo específico de información (ej. "habilidades blandas"),
- extrae SÓLO esa información del contexto
- y omite cualquier otra que no sea explícitamente del tipo solicitado.
-
-Contexto:
-{context}
-
-
-Usa tu creatividad y comenta un poco sobre lo que te pregunten aportando tu propio razonamiento a partir de la informacion dada
-Si lo que te preguntan tiene relacion con el contexto pero llegas a un punto que te quedas sin informacion debes incentivar al usuario a que para mas informacion se comunique con Roger directamente
-Si la pregunta no tiene relación con el contexto O no puedes extraer la información pedida específicamente del contexto
-, responde "This question is out my knowledge" segun el idioma en que te preguntan.
-Responde siempre en el mismo idioma de la pregunta.
-`;
-
-export async function POST(request: Request) {
-  try {
-    const { question }: RequestBody = await request.json();
-
-    if (!question || question.trim() === "") {
-      return NextResponse.json(
-        { error: "La pregunta es obligatoria." },
-        { status: 400 }
-      );
-    }
-
-    const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY ?? "";
-    if (!GOOGLE_API_KEY) {
-      return NextResponse.json(
-        { error: "GOOGLE_API_KEY no está configurada." },
-        { status: 500 }
-      );
-    }
-
-    // Cargar embedding guardado localmente
-    const filePath = path.resolve(process.cwd(), "public/vector-web2.json");
-    const raw = readFileSync(filePath, "utf-8");
-    const { text, embedding }: { text: string; embedding: number[] } = JSON.parse(raw);
-
-    const embeddings = new GoogleGenerativeAIEmbeddings({
-      apiKey: GOOGLE_API_KEY,
-      model: "gemini-embedding-001",
-    });
-
-    const vectorstore = await MemoryVectorStore.fromTexts(
-      [text],
-      [embedding],
-      embeddings
-    );
-
-    // Buscar contexto relevante (1 resultado)
-    const results = await vectorstore.similaritySearch(question, 1);
-    const context = results.length > 0 ? results[0].pageContent : "";
-
-    // Construir prompt tipo chat con system + user
-    const prompt = ChatPromptTemplate.fromMessages([
-      ["system", SYSTEM_PROMPT.trim()],
-      ["user", "{question}"],
-    ]);
-
-    // Instanciar modelo Gemini chat
-    const chat = new ChatGoogleGenerativeAI({
-      model: "gemini-1.5-flash",
-      temperature: 0.2,
-      apiKey: GOOGLE_API_KEY,
-    });
-
-    // Encadenar prompt + modelo
-    const chain = prompt.pipe(chat);
-
-    // Invocar con variables para prompt PASANDO context y question SEPARADOS
-    // pasamos context explícitamente para reemplazar {context} en system
-    const response = await chain.invoke({
-      context,
-      question,
-    });
-
-    // response es AIMessageChunk o similar, la respuesta está en response.content
-    const answer = context && response.content
-      ? response.content
-      : "Eso escapa de mi entendimiento";
-
-    return NextResponse.json({ answer });
-  } catch (error: any) {
-    console.error("Error en /api/ask:", error);
-    return NextResponse.json(
-      { error: error.message ?? "Error inesperado" },
-      { status: 500 }
-    );
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function cosineSimilarity(a: number[], b: number[]): number {
+  let dot = 0, normA = 0, normB = 0
+  for (let i = 0; i < a.length; i++) {
+    dot   += a[i] * b[i]
+    normA += a[i] * a[i]
+    normB += b[i] * b[i]
   }
+  return dot / (Math.sqrt(normA) * Math.sqrt(normB))
 }
 
+async function embedQuery(text: string, apiKey: string): Promise<number[]> {
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent?key=${apiKey}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "models/gemini-embedding-001",
+        content: { parts: [{ text }] },
+      }),
+    }
+  )
+  const data = await res.json()
+  return data.embedding.values as number[]
+}
+
+// ── Load vectors once (module-level cache — serverless cold start is fast) ───
+let _records: VectorRecord[] | null = null
+
+function getRecords(): VectorRecord[] {
+  if (_records) return _records
+  const filePath = path.resolve(process.cwd(), "data/rag-vectors.jsonl")
+  const lines = readFileSync(filePath, "utf-8").trim().split("\n")
+  _records = lines.map((l) => JSON.parse(l) as VectorRecord)
+  return _records
+}
+
+// ── System prompt ─────────────────────────────────────────────────────────────
+const SYSTEM_PROMPT = `Eres un asistente experto que responde preguntas sobre Roger Oria basándote SÓLO en la información del contexto proporcionado.
+
+Si la pregunta tiene relación con el contexto pero no hay suficiente información, invita al usuario a contactar a Roger directamente por Telegram (@Rogeroria).
+Si la pregunta no tiene relación con el contexto, responde "This question is out of my knowledge" en el idioma de la pregunta.
+Responde siempre en el mismo idioma de la pregunta. Puedes razonar y aportar tu propia lógica a partir de la info dada.
+
+CONTEXTO RELEVANTE:
+{context}`
+
+// ── Route ─────────────────────────────────────────────────────────────────────
+export async function POST(request: Request) {
+  const { messages } = await request.json()
+
+  const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY ?? ""
+
+  // Last user message is the query to embed
+  const lastUserMessage = [...messages].reverse().find((m: { role: string }) => m.role === "user")
+  const query = lastUserMessage?.content ?? ""
+
+  // Embed the query and retrieve top-3 most relevant chunks
+  const queryVec = await embedQuery(query, GOOGLE_API_KEY)
+  const records  = getRecords()
+
+  const ranked = records
+    .map((r) => ({ ...r, score: cosineSimilarity(queryVec, r.embedding) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+
+  const context = ranked.map((r) => `[${r.source}]\n${r.text}`).join("\n\n---\n\n")
+
+  const system = SYSTEM_PROMPT.replace("{context}", context)
+
+  const result = streamText({
+    model: google("gemini-1.5-flash"),
+    system,
+    messages,
+  })
+
+  return result.toDataStreamResponse()
+}

@@ -7,7 +7,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 export default function HeroSection() {
-    const handleDownloadCV = () => {
+  const handleDownloadCV = () => {
     const link = document.createElement("a");
     link.href = "/RogerCV.pdf";           // apunta al PDF en public/
     link.download = "RogerCV.pdf";        // nombre que tendrá al descargar
@@ -25,7 +25,7 @@ export default function HeroSection() {
     >
       {/* Elementos decorativos futuristas */}
       <motion.div
-        className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full opacity-60"
+        className="absolute top-20 left-10 w-2 h-2 bg-accent rounded-full opacity-60"
         animate={{
           scale: [1, 1.5, 1],
           opacity: [0.6, 1, 0.6],
@@ -37,7 +37,7 @@ export default function HeroSection() {
         }}
       />
       <motion.div
-        className="absolute top-40 right-20 w-1 h-1 bg-primary rounded-full opacity-40"
+        className="absolute top-40 right-20 w-1 h-1 bg-accent rounded-full opacity-40"
         animate={{
           scale: [1, 2, 1],
           opacity: [0.4, 0.8, 0.4],
@@ -66,7 +66,7 @@ export default function HeroSection() {
         >
           <motion.span
             animate={{
-              textShadow: ["0 0 0px #f97316", "0 0 10px #f97316", "0 0 0px #f97316"],
+              textShadow: ["0 0 0px #00E5FF", "0 0 24px #00E5FF", "0 0 0px #00E5FF"],
             }}
             transition={{
               duration: 2,
@@ -112,7 +112,7 @@ export default function HeroSection() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-accent transition-colors"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -138,7 +138,7 @@ export default function HeroSection() {
               alt="Roger Oria"
               width={200}
               height={200}
-              className="rounded-full border-2 border-primary shadow-lg shadow-primary/20"
+              className="rounded-full border-2 border-accent shadow-lg shadow-accent/20"
             />
           </motion.div>
         </motion.div>
@@ -154,7 +154,7 @@ export default function HeroSection() {
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             onClick={handleDownloadCV}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:shadow-xl transition-all duration-300"
           >
             <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
             Download CV

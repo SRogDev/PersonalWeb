@@ -18,7 +18,7 @@ export default function FinalCTA() {
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20"
+        className="bg-gradient-to-r from-accent/10 to-primary/5 rounded-2xl p-8 border border-accent/20"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Ready to work together?</h2>
         <p className="text-muted-foreground text-lg mb-6 max-w-2xl mx-auto">
@@ -28,7 +28,7 @@ export default function FinalCTA() {
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             asChild
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 text-lg"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 text-lg shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all duration-300"
           >
             <a href="https://t.me/@Rogeroria" target="_blank" rel="noopener noreferrer">
               <FaTelegram className="mr-2 h-5 w-5" />

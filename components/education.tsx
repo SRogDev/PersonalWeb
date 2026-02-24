@@ -109,22 +109,19 @@ export default function Education() {
           >
             <h4 className="font-semibold text-foreground text-xl md:text-2xl mb-4">English:</h4>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="flex flex-col items-center gap-2">
-                <Edit className="h-8 w-8 md:h-10 md:w-10 text-primary" />
-                <SignalBars level={4} />
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <Eye className="h-8 w-8 md:h-10 md:w-10 text-primary" />
-                <SignalBars level={4} />
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <Ear className="h-8 w-8 md:h-10 md:w-10 text-primary" />
-                <SignalBars level={2} />
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <Mic className="h-8 w-8 md:h-10 md:w-10 text-primary" />
-                <SignalBars level={1} />
-              </div>
+              {([
+                { icon: Edit, label: "Writing", level: 3, cefr: "B2" },
+                { icon: Eye, label: "Reading", level: 4, cefr: "C1" },
+                { icon: Ear, label: "Listening", level: 3, cefr: "B2" },
+                { icon: Mic, label: "Speaking", level: 3, cefr: "B2" },
+              ] as const).map(({ icon: Icon, label, level, cefr }) => (
+                <div key={label} className="flex flex-col items-center gap-2">
+                  <Icon className="h-8 w-8 md:h-10 md:w-10 text-primary" />
+                  <SignalBars level={level} />
+                  <span className="font-mono text-xs font-bold text-accent">{cefr}</span>
+                  <span className="text-xs text-muted-foreground">{label}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

@@ -1,37 +1,75 @@
-// scripts/generateEmbeddingLangchainGemini.js
-import { readFileSync, writeFileSync } from "fs";
-import dotenv from "dotenv";
-dotenv.config();
+import { readFileSync, writeFileSync, readdirSync } from "fs"
+import { join } from "path"
+import dotenv from "dotenv"
+dotenv.config({ path: ".env.local" })
 
-// Importa la clase correcta para la API de Google AI Studio (Gemini)
-// Nota: A partir de ciertas versiones de LangChain, el paquete es @langchain/google-genai
-// o @langchain/google-vertexai si el modelo Gemini es accedido via Vertex AI
-// Pero para la API Key directa de AI Studio, usaremos @langchain/google-genai.
-import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
-
-async function main() {
-  const data = JSON.parse(readFileSync("contenido-web.json", "utf-8"));
-  const text = data.content;
-
-  // Inicializa el modelo de embeddings de Google Generative AI
-  // Asegúrate de que tu variable de entorno se llama GOOGLE_API_KEY
-  // y que contiene la API Key de Google AI Studio.
-  const embeddings = new GoogleGenerativeAIEmbeddings({
-    // Usa el modelo gemini-embedding-001 que funciona con la API Key de AI Studio.
-    // Aunque el paquete es "GoogleGenerativeAIEmbeddings", el modelo se especifica aquí.
-    model: "gemini-embedding-001",
-    apiKey: process.env.GOOGLE_API_KEY, // Usa tu nombre de variable de entorno existente
-  });
-
-  const vector = await embeddings.embedQuery(text);
-
-  writeFileSync(
-    "public/vector-web2.json", // Cambia el nombre del archivo de salida para evitar conflictos
-    JSON.stringify({ text, embedding: vector }, null, 2)
-  );
-
-  console.log("Embedding generado y guardado usando LangChain.js y Google Gemini!");
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
+if (!GOOGLE_API_KEY) {
+  console.error("❌  GOOGLE_API_KEY not set")
+  process.exit(1)
 }
 
-main().catch(console.error);
+const RAG_DIR = join(process.cwd(), "content/rag")
+const OUTPUT = join(process.cwd(), "data/rag-vectors.jsonl")
 
+/** Call Gemini embedding REST API */
+async function embedText(text) {
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent?key=${GOOGLE_API_KEY}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "models/gemini-embedding-001",
+        content: { parts: [{ text }] },
+      }),
+    }
+  )
+  const data = await res.json()
+  if (!data.embedding?.values) {
+    throw new Error(`Embedding failed: ${JSON.stringify(data)}`)
+  }
+  return data.embedding.values
+}
+
+/** Split markdown into paragraph-level chunks (min 60 chars) */
+function chunkMarkdown(text) {
+  return text
+    .split(/\n{2,}/)
+    .map((c) => c.replace(/\n/g, " ").trim())
+    .filter((c) => c.length >= 60)
+}
+
+async function main() {
+  const files = readdirSync(RAG_DIR).filter((f) => f.endsWith(".md"))
+  console.log(`📄  Found ${files.length} RAG source files: ${files.join(", ")}`)
+
+  const records = []
+
+  for (const file of files) {
+    const source = file.replace(".md", "")
+    const raw = readFileSync(join(RAG_DIR, file), "utf-8")
+    const chunks = chunkMarkdown(raw)
+
+    console.log(`   ✦ ${file} → ${chunks.length} chunks`)
+
+    for (let i = 0; i < chunks.length; i++) {
+      const text = chunks[i]
+      console.log(`     embedding chunk ${i + 1}/${chunks.length}…`)
+      const embedding = await embedText(text)
+      records.push({ id: `${source}-${i}`, source, text, embedding })
+      // Small delay to avoid rate limiting
+      await new Promise((r) => setTimeout(r, 200))
+    }
+  }
+
+  const jsonl = records.map((r) => JSON.stringify(r)).join("\n")
+  writeFileSync(OUTPUT, jsonl, "utf-8")
+
+  console.log(`\n✅  ${records.length} vectors written to data/rag-vectors.jsonl`)
+}
+
+main().catch((err) => {
+  console.error("❌", err)
+  process.exit(1)
+})

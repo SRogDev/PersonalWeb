@@ -9,6 +9,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Ensure data/ files are bundled into Vercel serverless functions
+  outputFileTracingIncludes: {
+    "/api/bot": ["./data/**"],
+  },
 }
 
 export default nextConfig

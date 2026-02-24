@@ -2,9 +2,9 @@ import HeroSection from "@/components/hero-section"
 import Experience from "@/components/experience"
 import Education from "@/components/education"
 import Skills from "@/components/skills"
+import Blog from "@/components/blog"
 import OpenWork from "@/components/open-work"
 import FinalCTA from "@/components/final-cta"
-
 
 export default function Home() {
   return (
@@ -13,10 +13,9 @@ export default function Home() {
       <Experience />
       <Education />
       <Skills />
+      <Blog />
       <OpenWork />
       <FinalCTA />
-     
-   
     </main>
   )
 }

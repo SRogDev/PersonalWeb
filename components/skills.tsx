@@ -17,6 +17,7 @@ export default function Skills() {
     { name: "Next.js" }, { name: "Framer Motion" }, { name: "GSAP" }, { name: "Supabase" },
     { name: "SQL" }, { name: "Git" }, { name: "GitHub" }, { name: "LangChain" },
     { name: "Python" }, { name: "Rust" }, { name: "PyTorch" }, { name: "Three.js" },
+    { name: "Solidity" }, { name: "Foundry" },
   ]
   const softSkills = [
     { name: "Leadership" }, { name: "Creativity" }, { name: "Active Learning" },

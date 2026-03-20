@@ -7,13 +7,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import {
   Code, Lightbulb, GraduationCap, Star, Brain,
   Target, Megaphone, BarChart3, Zap, Heart, Eye, PenTool,
-  Rocket, UserCheck, Sparkles, Compass, Palette,
+  Rocket, UserCheck, Sparkles, Compass, Palette, Hammer,
 } from "lucide-react"
 import {
   SiHtml5, SiCss3, SiTailwindcss, SiJavascript, SiTypescript,
   SiNodedotjs, SiReact, SiNextdotjs, SiFramer, SiSupabase,
   SiMysql, SiGit, SiGithub, SiPython, SiFastapi, SiMongodb, SiN8N,
-  SiRust, SiPytorch, SiThreedotjs, SiGreensock,
+  SiRust, SiPytorch, SiThreedotjs, SiGreensock, SiSolidity,
 } from "react-icons/si"
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
@@ -44,6 +44,8 @@ const technicalIconMap: Record<string, React.ReactNode> = {
   rust:          <SiRust         className="h-5 w-5 text-orange-700"   />,
   pytorch:       <SiPytorch      className="h-5 w-5 text-orange-500"   />,
   threejs:       <SiThreedotjs   className="h-5 w-5 text-foreground"   />,
+  solidity:      <SiSolidity     className="h-5 w-5 text-slate-300"    />,
+  foundry:       <Hammer         className="h-5 w-5 text-amber-400"    />,
 }
 
 const softSkillsIconMap: Record<string, React.ReactNode> = {

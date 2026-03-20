@@ -24,62 +24,62 @@ interface TypeSkillProps {
 }
 
 const technicalIconMap: Record<string, React.ReactNode> = {
-  html:          <SiHtml5        className="h-5 w-5 text-orange-500"   />,
-  css:           <SiCss3         className="h-5 w-5 text-blue-500"     />,
-  tailwind:      <SiTailwindcss  className="h-5 w-5 text-cyan-400"     />,
-  shadcn:        <Code           className="h-5 w-5 text-slate-400"    />,
-  javascript:    <SiJavascript   className="h-5 w-5 text-yellow-400"   />,
-  typescript:    <SiTypescript   className="h-5 w-5 text-blue-500"     />,
-  nodejs:        <SiNodedotjs    className="h-5 w-5 text-green-500"    />,
-  react:         <SiReact        className="h-5 w-5 text-cyan-400"     />,
-  nextjs:        <SiNextdotjs    className="h-5 w-5 text-foreground"   />,
-  framermotion:  <SiFramer       className="h-5 w-5 text-pink-400"     />,
-  gsap:          <SiGreensock    className="h-5 w-5 text-green-400"    />,
-  supabase:      <SiSupabase     className="h-5 w-5 text-green-500"    />,
-  sql:           <SiMysql        className="h-5 w-5 text-blue-500"     />,
-  git:           <SiGit          className="h-5 w-5 text-orange-500"   />,
-  github:        <SiGithub       className="h-5 w-5 text-foreground"   />,
-  langchain:     <Code           className="h-5 w-5 text-purple-400"   />,
-  python:        <SiPython       className="h-5 w-5 text-yellow-400"   />,
-  rust:          <SiRust         className="h-5 w-5 text-orange-700"   />,
-  pytorch:       <SiPytorch      className="h-5 w-5 text-orange-500"   />,
-  threejs:       <SiThreedotjs   className="h-5 w-5 text-foreground"   />,
-  solidity:      <SiSolidity     className="h-5 w-5 text-slate-300"    />,
-  foundry:       <Hammer         className="h-5 w-5 text-amber-400"    />,
+  html: <SiHtml5 className="h-5 w-5 text-orange-500" />,
+  css: <SiCss3 className="h-5 w-5 text-blue-500" />,
+  tailwind: <SiTailwindcss className="h-5 w-5 text-cyan-400" />,
+  shadcn: <Code className="h-5 w-5 text-slate-400" />,
+  javascript: <SiJavascript className="h-5 w-5 text-yellow-400" />,
+  typescript: <SiTypescript className="h-5 w-5 text-blue-500" />,
+  nodejs: <SiNodedotjs className="h-5 w-5 text-green-500" />,
+  react: <SiReact className="h-5 w-5 text-cyan-400" />,
+  nextjs: <SiNextdotjs className="h-5 w-5 text-foreground" />,
+  framermotion: <SiFramer className="h-5 w-5 text-pink-400" />,
+  gsap: <SiGreensock className="h-5 w-5 text-green-400" />,
+  supabase: <SiSupabase className="h-5 w-5 text-green-500" />,
+  sql: <SiMysql className="h-5 w-5 text-blue-500" />,
+  git: <SiGit className="h-5 w-5 text-orange-500" />,
+  github: <SiGithub className="h-5 w-5 text-foreground" />,
+  langchain: <Code className="h-5 w-5 text-purple-400" />,
+  python: <SiPython className="h-5 w-5 text-yellow-400" />,
+  rust: <SiRust className="h-5 w-5 text-orange-700" />,
+  pytorch: <SiPytorch className="h-5 w-5 text-orange-500" />,
+  threejs: <SiThreedotjs className="h-5 w-5 text-foreground" />,
+  solidity: <SiSolidity className="h-5 w-5 text-slate-300" />,
+  foundry: <Hammer className="h-5 w-5 text-amber-400" />,
 }
 
 const softSkillsIconMap: Record<string, React.ReactNode> = {
-  leadership:      <UserCheck   className="h-5 w-5 text-blue-400"    />,
-  creativity:      <Sparkles    className="h-5 w-5 text-purple-400"  />,
-  activelearning:  <Brain       className="h-5 w-5 text-green-400"   />,
-  analyticthinking:<BarChart3   className="h-5 w-5 text-primary"     />,
-  designthinking:  <Compass     className="h-5 w-5 text-pink-400"    />,
+  leadership: <UserCheck className="h-5 w-5 text-blue-400" />,
+  creativity: <Sparkles className="h-5 w-5 text-purple-400" />,
+  activelearning: <Brain className="h-5 w-5 text-green-400" />,
+  analyticthinking: <BarChart3 className="h-5 w-5 text-primary" />,
+  designthinking: <Compass className="h-5 w-5 text-pink-400" />,
 }
 
 const productSkillsIconMap: Record<string, React.ReactNode> = {
-  prototyping:          <PenTool  className="h-5 w-5 text-blue-400"   />,
-  copywriting:          <Palette  className="h-5 w-5 text-green-400"  />,
-  userexperiencedesign: <Eye      className="h-5 w-5 text-purple-400" />,
+  prototyping: <PenTool className="h-5 w-5 text-blue-400" />,
+  copywriting: <Palette className="h-5 w-5 text-green-400" />,
+  userexperiencedesign: <Eye className="h-5 w-5 text-purple-400" />,
 }
 
 const marketingSkillsIconMap: Record<string, React.ReactNode> = {
-  technicalgrowthmarketing: <Rocket className="h-5 w-5 text-primary"     />,
-  viralloopsgamification:   <Zap    className="h-5 w-5 text-yellow-400"  />,
-  campaignstrategies:       <Target className="h-5 w-5 text-red-400"     />,
+  technicalgrowthmarketing: <Rocket className="h-5 w-5 text-primary" />,
+  viralloopsgamification: <Zap className="h-5 w-5 text-yellow-400" />,
+  campaignstrategies: <Target className="h-5 w-5 text-red-400" />,
 }
 
 const learningSkillsIconMap: Record<string, React.ReactNode> = {
-  fastapi: <SiFastapi className="h-5 w-5 text-slate-300"  />,
-  mongodb: <SiMongodb className="h-5 w-5 text-green-500"  />,
-  n8n:     <SiN8N     className="h-5 w-5 text-purple-400" />,
+  fastapi: <SiFastapi className="h-5 w-5 text-slate-300" />,
+  mongodb: <SiMongodb className="h-5 w-5 text-green-500" />,
+  n8n: <SiN8N className="h-5 w-5 text-purple-400" />,
 }
 
 const categoryIcons: Record<string, React.ReactNode> = {
-  Technical:         <Code          className="h-6 w-6 text-accent"  />,
-  Soft:              <Heart         className="h-6 w-6 text-accent"  />,
-  "Product & UX/UI": <Lightbulb     className="h-6 w-6 text-accent"  />,
-  Marketing:         <Megaphone     className="h-6 w-6 text-accent"  />,
-  Learning:          <GraduationCap className="h-6 w-6 text-accent"  />,
+  Technical: <Code className="h-6 w-6 text-accent" />,
+  Soft: <Heart className="h-6 w-6 text-accent" />,
+  "Product & UX/UI": <Lightbulb className="h-6 w-6 text-accent" />,
+  Marketing: <Megaphone className="h-6 w-6 text-accent" />,
+  Learning: <GraduationCap className="h-6 w-6 text-accent" />,
 }
 
 export default function TypeSkill({ title, skills }: TypeSkillProps) {
@@ -106,11 +106,11 @@ export default function TypeSkill({ title, skills }: TypeSkillProps) {
   const getIconForSkill = (skillName: string, category: string) => {
     const key = skillName.toLowerCase().replace(/[^a-z0-9]/g, "")
     switch (category) {
-      case "Technical":       return technicalIconMap[key]
-      case "Soft":            return softSkillsIconMap[key]
+      case "Technical": return technicalIconMap[key]
+      case "Soft": return softSkillsIconMap[key]
       case "Product & UX/UI": return productSkillsIconMap[key]
-      case "Marketing":       return marketingSkillsIconMap[key]
-      case "Learning":        return learningSkillsIconMap[key]
+      case "Marketing": return marketingSkillsIconMap[key]
+      case "Learning": return learningSkillsIconMap[key]
       default: return <Star className="h-5 w-5" />
     }
   }

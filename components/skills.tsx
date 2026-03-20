@@ -54,11 +54,11 @@ export default function Skills() {
       <SectionTitle className="mb-16">Skills</SectionTitle>
       <div className="space-y-16">
         {[
-          { title: "Technical",       skills: technicalSkills  },
-          { title: "Soft",            skills: softSkills       },
-          { title: "Product & UX/UI", skills: productSkills    },
-          { title: "Marketing",       skills: marketingSkills  },
-          { title: "Learning",        skills: learningSkills   },
+          { title: "Technical", skills: technicalSkills },
+          { title: "Soft", skills: softSkills },
+          { title: "Product & UX/UI", skills: productSkills },
+          { title: "Marketing", skills: marketingSkills },
+          { title: "Learning", skills: learningSkills },
         ].map(({ title, skills }, i) => (
           <div key={i} className="skill-category">
             <TypeSkill title={title} skills={skills} />

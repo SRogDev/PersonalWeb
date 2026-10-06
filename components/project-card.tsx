@@ -8,7 +8,7 @@ import { ExternalLink } from "lucide-react"
 interface ProjectCardProps {
   title: string
   image: string
-  link: string
+  link?: string
   description?: string
   tags?: string[]
 }
@@ -21,9 +21,9 @@ export default function ProjectCard({ title, image, link, description, tags }: P
       className="h-full"
     >
       <Card
-        className="h-full cursor-pointer transition-all duration-300 bg-card border-border/60
-                   hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 overflow-hidden group"
-        onClick={() => window.open(link, "_blank")}
+        className={`h-full ${link ? "cursor-pointer" : ""} transition-all duration-300 bg-card border-border/60
+                   hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 overflow-hidden group`}
+        onClick={link ? () => window.open(link, "_blank") : undefined}
       >
         <CardContent className="p-0 flex flex-col h-full">
           <div className="relative overflow-hidden">

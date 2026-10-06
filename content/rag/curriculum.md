@@ -3,7 +3,7 @@
 ## Personal Information
 
 Name: Roger Oria
-Role: Software Developer / Full Dev Cycle Engineer / Startup Founder
+Role: AI Founder / AI Engineer & ML Engineer
 Location: Cuba
 Languages: Spanish (Native), English (B2 overall — Writing B2, Listening B2, Speaking B2, Reading C1)
 
@@ -20,32 +20,37 @@ Universidad Máximo Gómez Báez, Cuba. Currently pursuing a Bachelor's degree i
 
 ## Technical Skills
 
-HTML, CSS, Tailwind CSS, Shadcn/ui, JavaScript, TypeScript, Node.js, React, Next.js, Framer Motion, GSAP, Supabase, SQL, Git, GitHub, LangChain, Python, Rust, PyTorch, Three.js.
+**AI Engineering:** LangGraph, LangChain, Vercel AI SDK, OpenRouter, RAG Pipelines, Agent Evals, Tool Use / MCP, Prompt Engineering.
+**ML Engineering:** PyTorch, LoRA / QLoRA, Reinforcement Learning, PPO / MAPPO, Contrastive Learning, Unsloth, scikit-learn, NumPy, pandas.
+**Languages:** Python, TypeScript, Rust, JavaScript, SQL.
+**Product Engineering:** Next.js, React, FastAPI, Supabase, PostgreSQL, Redis, Tailwind CSS, Shadcn/ui, Three.js.
 
 ## Currently Learning
 
-FastAPI, MongoDB, n8n.
+RL foundations (MDPs → policy gradients); agent post-training (RLHF / DPO / RLVR); MLOps.
 
 ## Soft Skills
 
 Leadership, Creativity, Active Learning, Analytic Thinking, Design Thinking.
 
-## Product & UX/UI Skills
+## Founder Toolkit
 
-Prototyping, Copywriting, User Experience Design.
-
-## Marketing Skills
-
-Technical Growth Marketing, Viral Loops and Gamification, Campaign Strategies.
+Prototyping, UX Design, Copywriting, Technical Growth Marketing, Viral Loops & Gamification.
 
 ## Projects
 
-**Tones.platform.com** — Founder and lead developer. Music social platform built for scale with real-time streaming and social graph features.
+**Polygrow** — Founder. AI-native business OS for solopreneurs; flagship, in active development.
 
-**Empatando.com** — Founder and lead developer. AI-powered connection platform using smart matching algorithms to surface meaningful connections between people.
+**Rustenwer** — Founder. Intelligence fabrication platform: CPU PyTorch + LoRA training infra, LangGraph agents, hosted inference. Public: https://github.com/SRogDev/rustenwer
 
-**SocialClubs.com** — Founder and lead developer. Infrastructure platform for online communities, from micro-clubs to massive networks.
+**Rogis** — Founder. Redis reimagined for AI agents: deterministic core + native semantic engine (HNSW vectors). Public: https://github.com/SRogDev/rogis
+
+**Domino RL** — Founder. Pure-RL agent for Cuban double-9 domino: zero heuristics, MAPPO self-play. Public: https://github.com/SRogDev/domino-rl
+
+**Agentropy** — Founder. Observability for AI agents (open-core). Public: https://github.com/SRogDev/Agentropy
+
+**DeepBooks** — Founder. Immersive reading platform with AI-generated momentos. Public: https://github.com/SRogDev/DeepBooks
 
 ## What Roger Can Build
 
-Roger can build full-stack web applications end to end. He can design UI systems, build React/Next.js frontends, develop Node.js and Python backends, integrate databases with Supabase, build AI-powered features with LangChain and the Vercel AI SDK, and deploy to production on Vercel or other cloud platforms. He can run the full development cycle independently.
+Roger can take an AI product from idea to production independently: design the model approach (fine-tuning with LoRA/QLoRA, RL training, or agent orchestration with LangGraph), build RAG pipelines and evals, develop the full-stack product (Next.js + FastAPI + Supabase), and deploy to production. Idea → model → product → production, solo.

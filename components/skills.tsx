@@ -11,26 +11,38 @@ gsap.registerPlugin(ScrollTrigger, useGSAP)
 export default function Skills() {
   const containerRef = useRef<HTMLElement>(null)
 
-  const technicalSkills = [
-    { name: "HTML" }, { name: "CSS" }, { name: "Tailwind" }, { name: "Shadcn" },
-    { name: "JavaScript" }, { name: "TypeScript" }, { name: "Node.js" }, { name: "React" },
-    { name: "Next.js" }, { name: "Framer Motion" }, { name: "GSAP" }, { name: "Supabase" },
-    { name: "SQL" }, { name: "Git" }, { name: "GitHub" }, { name: "LangChain" },
-    { name: "Python" }, { name: "Rust" }, { name: "PyTorch" }, { name: "Three.js" },
-    { name: "Solidity" }, { name: "Foundry" },
+  const aiEngineeringSkills = [
+    { name: "LangGraph" }, { name: "LangChain" }, { name: "Vercel AI SDK" },
+    { name: "OpenRouter" }, { name: "RAG Pipelines" }, { name: "Agent Evals" },
+    { name: "Tool Use / MCP" }, { name: "Prompt Engineering" },
+  ]
+  const mlEngineeringSkills = [
+    { name: "PyTorch" }, { name: "LoRA / QLoRA" }, { name: "Reinforcement Learning" },
+    { name: "PPO / MAPPO" }, { name: "Contrastive Learning" }, { name: "Unsloth" },
+    { name: "scikit-learn" }, { name: "NumPy" }, { name: "pandas" },
+  ]
+  const languageSkills = [
+    { name: "Python" }, { name: "TypeScript" }, { name: "Rust" },
+    { name: "JavaScript" }, { name: "SQL" },
+  ]
+  const productEngineeringSkills = [
+    { name: "Next.js" }, { name: "React" }, { name: "FastAPI" },
+    { name: "Supabase" }, { name: "PostgreSQL" }, { name: "Redis" },
+    { name: "Tailwind CSS" }, { name: "Shadcn/ui" }, { name: "Three.js" },
+  ]
+  const founderToolkitSkills = [
+    { name: "Prototyping" }, { name: "UX Design" }, { name: "Copywriting" },
+    { name: "Technical Growth Marketing" }, { name: "Viral Loops & Gamification" },
   ]
   const softSkills = [
     { name: "Leadership" }, { name: "Creativity" }, { name: "Active Learning" },
     { name: "Analytic Thinking" }, { name: "Design Thinking" },
   ]
-  const productSkills = [
-    { name: "Prototyping" }, { name: "Copywriting" }, { name: "User Experience Design" },
+  const learningSkills = [
+    { name: "RL Foundations (MDPs → Policy Gradients)" },
+    { name: "Agent Post-Training (RLHF / DPO / RLVR)" },
+    { name: "MLOps" },
   ]
-  const marketingSkills = [
-    { name: "Technical Growth Marketing" }, { name: "Viral Loops - Gamification" },
-    { name: "Campaign Strategies" },
-  ]
-  const learningSkills = [{ name: "Fast API" }, { name: "MongoDB" }, { name: "n8n" }]
 
   useGSAP(
     () => {
@@ -54,11 +66,13 @@ export default function Skills() {
       <SectionTitle className="mb-16">Skills</SectionTitle>
       <div className="space-y-16">
         {[
-          { title: "Technical", skills: technicalSkills },
+          { title: "AI Engineering", skills: aiEngineeringSkills },
+          { title: "ML Engineering", skills: mlEngineeringSkills },
+          { title: "Languages", skills: languageSkills },
+          { title: "Product Engineering", skills: productEngineeringSkills },
+          { title: "Founder Toolkit", skills: founderToolkitSkills },
           { title: "Soft", skills: softSkills },
-          { title: "Product & UX/UI", skills: productSkills },
-          { title: "Marketing", skills: marketingSkills },
-          { title: "Learning", skills: learningSkills },
+          { title: "Currently Learning", skills: learningSkills },
         ].map(({ title, skills }, i) => (
           <div key={i} className="skill-category">
             <TypeSkill title={title} skills={skills} />

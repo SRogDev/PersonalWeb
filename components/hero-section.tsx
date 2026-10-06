@@ -74,7 +74,7 @@ export default function HeroSection() {
               ease: "easeInOut",
             }}
           >
-            SOFTWARE DEVELOPER
+            AI FOUNDER
           </motion.span>
         </motion.h1>
         <motion.h2
@@ -97,9 +97,10 @@ export default function HeroSection() {
           className="flex-1"
         >
           <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed mb-6">
-            I'm a passionate developer focused on creating innovative and scalable solutions. As founder of my own startup,
-            I combine technical skills with business vision to build products that truly impact people's lives. My focus
-            is on full-stack development with modern technologies.
+            I'm Roger Oria — an AI Founder and AI/ML engineer on a mission to become the #1 in AI. I build{" "}
+            <span className="text-primary font-semibold">Polygrow</span>, an AI-native business OS for solopreneurs,
+            and run a laboratory of ~30 AI builds a year — owning the stack from the model (PyTorch, RL, LoRA
+            fine-tuning) to the product (LangGraph agents, Next.js). I ship end to end: idea → model → product → production.
           </p>
           <div className="flex gap-4 justify-center lg:justify-start">
             {[

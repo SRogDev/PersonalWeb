@@ -2,29 +2,39 @@
 
 ## Identity
 
-Roger Oria is a Full Dev Cycle software developer and startup founder. His core identity in tech is "Full Dev Cycle": he can own and ship an entire product independently — from UI design to backend to AI deployment to production. He is not a specialist in one layer; he operates the whole stack.
+Roger Oria is an AI Founder, AI engineer, and ML engineer. His mission is to become the #1 in AI — a recognized name built in public through shipping. He runs a personal laboratory that ships ~30 AI builds a year, owning the stack from the model (PyTorch training, RL, LoRA fine-tuning) up to the product (LangGraph agents, Next.js). His motto: idea → model → product → production.
 
 ## What Roger Does
 
-Roger builds full-stack web products using Next.js, React, TypeScript, Supabase, and the Vercel ecosystem. He integrates AI into products using LangChain, the Vercel AI SDK, Python, and PyTorch. He designs interfaces with Tailwind CSS, Shadcn/ui, Framer Motion, and GSAP. He is the founder and lead developer of his own startup, building social platforms that reach real users.
+Roger builds AI products end to end. AI engineering: production agent systems with LangGraph (multi-agent, tools, evals), RAG pipelines, Vercel AI SDK, OpenRouter. ML engineering: PyTorch training — LoRA/QLoRA fine-tuning, reinforcement learning (PPO/MAPPO, self-play), contrastive learning, Unsloth. Product engineering: Next.js, React, FastAPI, Supabase, PostgreSQL, Redis, Tailwind CSS. Languages: Python, TypeScript, Rust.
+
+## Flagship: Polygrow
+
+Polygrow is Roger's flagship — an AI-native business OS for solopreneurs and small startups: one environment where agents run the business (ops, marketing, research, analytics, code). In active development; intended to become the company he lives from.
 
 ## Featured Projects
 
-**Tones.platform.com** is a music social platform where artists and fans converge. It is built for scale with real-time streaming and social graph features. Tags: Social, Music, Real-time.
+**Polygrow** — AI-native business OS for solopreneurs. Flagship, in active development. Tags: AI Founder, Flagship, Agents.
 
-**Empatando.com** connects people through shared interests and goals using smart AI matching algorithms to surface meaningful connections. Tags: AI Matching, Community, Networking.
+**Rustenwer** — intelligence fabrication & discovery platform: the smallest, cheapest sufficiently-capable intelligence for any problem. CPU PyTorch + LoRA training infra with checkpoints and cost accounting, LangGraph agents, hosted inference. Tags: PyTorch, LoRA, LangGraph. Repo: https://github.com/SRogDev/rustenwer (public).
 
-**SocialClubs.com** is the modern infrastructure for online communities, from micro-clubs to massive networks, built with the full dev cycle approach. Tags: Communities, SaaS, Full Stack.
+**Rogis** — Redis, reimagined for AI agents: a deterministic Redis superset (RESP2/RESP3, snapshot + AOF) with a native semantic engine — first-class vectors, HNSW, SEMSET/SEMGET. Tags: Rust, Redis, Vectors. Repo: https://github.com/SRogDev/rogis (public).
+
+**Domino RL** — teaching AI to play Cuban double-9 domino with pure reinforcement learning: zero human heuristics, sparse +1/-1/0 rewards only, MAPPO self-play, progressive curriculum 1v1 → 2v2 teams. Tags: RL, MAPPO, PyTorch. Repo: https://github.com/SRogDev/domino-rl (public).
+
+**Agentropy** — observability for AI agents: "See it. Improve it." Open-core (OTel-standard capture open source, insight engine proprietary), LangGraph insight engine, real-data dashboards. Tags: Agents, Observability, LLM. Repo: https://github.com/SRogDev/Agentropy (public).
+
+**DeepBooks** — immersive reading platform: real books, AI-generated momentos, ambient reading experiences. Roger's GenAI showcase. Tags: GenAI, RAG, Next.js. Repo: https://github.com/SRogDev/DeepBooks (public).
+
+More in his pinned GitHub repos — the lab ships ~30 builds a year.
 
 ## Open to Work
 
-Roger is open to working as a Product Engineer, Frontend Developer, Fullstack Developer (Supabase), Technology Consultant, building Landing Pages end to end, or working inside a startup.
+Roger is open to work as AI Founder / Co-founder, AI Engineer (agent systems), ML Engineer (training & fine-tuning), AI Product Engineer (0 → 1), building AI MVPs end to end, or advising AI startups.
 
 ## Professional Goals
 
-Roger wants to continuously learn and grow professionally in the tech industry. He wants to build valuable connections and a network within the technology sector. He actively participates in creating innovative products with positive social impact. His ultimate goal is to build his own successful startup.
-
-Networking, Innovation, Growth, and Entrepreneurship are his core values.
+Become the #1 in AI — a recognized name, built in public. Turn Polygrow into a company he can live from. Ship ~30 AI builds a year and open-source the best parts. Help founders ship real AI products, not demos. Core values: AI Agents, Training, Open Source, Entrepreneurship.
 
 ## Blog
 

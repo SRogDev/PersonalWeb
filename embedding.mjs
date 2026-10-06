@@ -3,9 +3,9 @@ import { join } from "path"
 import dotenv from "dotenv"
 dotenv.config({ path: ".env.local" })
 
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY
 if (!GOOGLE_API_KEY) {
-  console.error("❌  GOOGLE_API_KEY not set")
+  console.error("❌  GOOGLE_API_KEY not set (see .env.example)")
   process.exit(1)
 }
 

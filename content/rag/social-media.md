@@ -10,6 +10,7 @@ Telegram: @Rogeroria / <https://t.me/@Rogeroria>
 - **Telegram**: @Rogeroria — <https://t.me/@Rogeroria> (primary contact)
 - **Instagram**: @rogeroriag — <https://instagram.com/rogeroriag>
 - **LinkedIn**: <https://www.linkedin.com/in/roger-oria-aa6179301>
+- **GitHub**: <https://github.com/SRogDev>
 
 ## Blog & Writing
 
@@ -23,8 +24,8 @@ Roger writes technical and product articles. His published and upcoming topics:
 
 ## Collaboration & Hiring
 
-Roger is open to freelance projects, startup co-founder opportunities, product engineering roles, and technology consulting. He builds landing pages, full-stack applications, and AI-integrated products. For fastest response, contact via Telegram.
+Roger is open to AI Founder / co-founder opportunities, AI Engineer and ML Engineer roles, AI product engineering (0 → 1), building AI MVPs end to end, and advising AI startups. He takes AI products from idea to production solo: model approach, RAG/agent systems, full-stack build, deployment. For fastest response, contact via Telegram.
 
 ## Availability
 
-Roger is currently available for new projects and collaborations. He is actively looking to work with startups, innovative companies, and builders who want to move fast and ship real products.
+Roger is currently available for new projects and collaborations. He is actively looking to work with AI startups, founders, and builders who want to move fast and ship real AI products — not demos.

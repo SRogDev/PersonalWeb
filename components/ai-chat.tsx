@@ -1,7 +1,8 @@
 "use client"
 
 import { useChat } from "@ai-sdk/react"
-import { useEffect, useRef } from "react"
+import { DefaultChatTransport, type UIMessage } from "ai"
+import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -13,16 +14,38 @@ interface AIChatProps {
   onClose: () => void
 }
 
-export default function AIChat({ isOpen, onClose }: AIChatProps) {
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
-    api: "/api/bot",
-  })
+interface ChatState {
+  messages: UIMessage[]
+  sendMessage: (message: { text: string }) => void
+  status: "submitted" | "streaming" | "ready" | "error"
+}
 
+function messageText(message: UIMessage): string {
+  return message.parts
+    .filter((part) => part.type === "text")
+    .map((part) => (part as { text: string }).text)
+    .join("")
+}
+
+export default function AIChat({ isOpen, onClose }: AIChatProps) {
+  const [input, setInput] = useState("")
+  const { messages, sendMessage, status } = useChat({
+    transport: new DefaultChatTransport({ api: "/api/bot" }),
+  }) as unknown as ChatState
+
+  const isLoading = status === "submitted" || status === "streaming"
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages, isLoading])
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
+    if (!input.trim() || isLoading) return
+    sendMessage({ text: input })
+    setInput("")
+  }
 
   return (
     <AnimatePresence>
@@ -65,7 +88,7 @@ export default function AIChat({ isOpen, onClose }: AIChatProps) {
                         : "bg-muted/60 text-muted-foreground mr-auto"
                     }`}
                   >
-                    {message.content}
+                    {messageText(message)}
                   </motion.div>
                 ))}
                 {isLoading && (
@@ -90,13 +113,13 @@ export default function AIChat({ isOpen, onClose }: AIChatProps) {
               >
                 <Textarea
                   value={input}
-                  onChange={handleInputChange}
+                  onChange={(event) => setInput(event.target.value)}
                   placeholder="Ask something about Roger..."
                   className="flex-1 min-h-[40px] max-h-[80px] text-sm resize-none border-border/60 focus:border-accent/50"
                   onKeyDown={(e) => {
                     if (e.key === "Enter" && !e.shiftKey) {
                       e.preventDefault()
-                      handleSubmit(e as any)
+                      handleSubmit(e)
                     }
                   }}
                 />

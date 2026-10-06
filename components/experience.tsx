@@ -7,25 +7,45 @@ import SectionTitle from "./section-title"
 export default function Experience() {
   const projects = [
     {
-      title: "Tones.platform.com",
-      image: "/tones.jpg",
-      link: "https://tones.platform.com",
-      description: "Music social platform where artists and fans converge. Built for scale with real-time streaming and social graph features.",
-      tags: ["Social", "Music", "Real-time"],
+      title: "Polygrow",
+      image: "/covers/polygrow.svg",
+      description: "AI-native business OS for solopreneurs — one environment where agents run the business: ops, marketing, research, analytics. My flagship; in active development.",
+      tags: ["AI Founder", "Flagship", "Agents"],
     },
     {
-      title: "Empatando.com",
-      image: "/empatando.jpg",
-      link: "https://empatando.com",
-      description: "Connecting people through shared interests and goals. Smart matching algorithms powered by AI to surface meaningful connections.",
-      tags: ["AI Matching", "Community", "Networking"],
+      title: "Rustenwer",
+      image: "/covers/rustenwer.svg",
+      link: "https://github.com/SRogDev/rustenwer",
+      description: "Intelligence fabrication & discovery platform: the smallest, cheapest sufficiently-capable intelligence for any problem. LoRA training infra + LangGraph agents, end to end.",
+      tags: ["PyTorch", "LoRA", "LangGraph"],
     },
     {
-      title: "SocialClubs.com",
-      image: "/socialclubs.jpg",
-      link: "https://socialclubs.com",
-      description: "The modern infrastructure for online communities. From micro-clubs to massive networks, built with the full dev cycle approach.",
-      tags: ["Communities", "SaaS", "Full Stack"],
+      title: "Rogis",
+      image: "/covers/rogis.svg",
+      link: "https://github.com/SRogDev/rogis",
+      description: "Redis, reimagined for AI agents: a deterministic Redis superset with a native semantic engine — first-class vectors, HNSW, SEMSET/SEMGET.",
+      tags: ["Rust", "Redis", "Vectors"],
+    },
+    {
+      title: "Domino RL",
+      image: "/covers/domino-rl.svg",
+      link: "https://github.com/SRogDev/domino-rl",
+      description: "Teaching AI to play Cuban double-9 domino with pure reinforcement learning: zero human heuristics, sparse rewards, MAPPO self-play.",
+      tags: ["RL", "MAPPO", "PyTorch"],
+    },
+    {
+      title: "Agentropy",
+      image: "/covers/agentropy.svg",
+      link: "https://github.com/SRogDev/Agentropy",
+      description: "Observability for AI agents — see it, improve it. Open-core: OTel-standard capture, LangGraph insight engine, real-data dashboards.",
+      tags: ["Agents", "Observability", "LLM"],
+    },
+    {
+      title: "DeepBooks",
+      image: "/covers/deepbooks.svg",
+      link: "https://github.com/SRogDev/DeepBooks",
+      description: "Immersive reading platform: real books, AI-generated momentos, ambient reading experiences. My GenAI showcase.",
+      tags: ["GenAI", "RAG", "Next.js"],
     },
   ]
 
@@ -62,8 +82,8 @@ export default function Experience() {
             className="absolute right-0 top-1/2 h-px bg-accent/60"
           />
           <p className="text-muted-foreground text-center px-8 sm:px-12 leading-relaxed text-lg sm:text-xl">
-            As founder of my startup, I lead the development of products that combine cutting-edge technology
-            with exceptional user experiences — built end to end with the full dev cycle approach.
+            As an AI Founder, I build the stack and the product — from training runs to shipped apps.
+            A selection from the lab, which ships ~30 AI builds a year.
           </p>
         </div>
       </motion.div>

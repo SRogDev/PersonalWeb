@@ -5,19 +5,19 @@ import SectionTitle from "./section-title"
 
 export default function OpenWork() {
   const workOptions = [
-    { title: "Product Engineer", highlighted: true },
-    { title: "Frontend Developer", highlighted: false },
-    { title: "Fullstack Developer (Supabase)", highlighted: false },
-    { title: "Technology Consultant", highlighted: false },
-    { title: "Build Landing Page End to End", highlighted: false },
-    { title: "Work in a Startup", highlighted: true },
+    { title: "AI Founder / Co-founder", highlighted: true },
+    { title: "AI Engineer — Agent Systems", highlighted: true },
+    { title: "ML Engineer — Training & Fine-tuning", highlighted: false },
+    { title: "AI Product Engineer (0 → 1)", highlighted: false },
+    { title: "Build AI MVPs End to End", highlighted: false },
+    { title: "Advisor for AI Startups", highlighted: false },
   ]
 
   const professionalGoals = [
-    "Continuously learn and grow professionally in the tech industry",
-    "Build valuable connections and network within the technology sector",
-    "Actively participate in creating innovative products with positive social impact",
-    "Build my own successful startup",
+    "Become the #1 in AI — a recognized name, built in public",
+    "Turn Polygrow into a company I can live from",
+    "Ship ~30 AI builds a year — and open-source the best parts",
+    "Help founders ship real AI products, not demos",
   ]
 
   return (
@@ -91,7 +91,7 @@ export default function OpenWork() {
           <div className="flex items-center gap-2 mt-6">
             <Users className="h-5 w-5 text-primary" />
             <span className="text-sm sm:text-base text-primary font-medium">
-              Networking • Innovation • Growth • Entrepreneurship
+              AI Agents • Training • Open Source • Entrepreneurship
             </span>
           </div>
         </motion.div>

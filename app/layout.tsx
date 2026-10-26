@@ -6,15 +6,17 @@ import "./globals.css"
 import FloatingChatButton from "@/components/floating-chat-button"
 
 export const metadata: Metadata = {
-  title: "Roger Oria — AI Founder | AI Engineer & ML Engineer",
+  title: "Roger Oria — Product Builder · AI Engineer / ML enthusiast",
   description:
-    "Roger Oria is an AI Founder building Polygrow, the AI-native business OS for solopreneurs. AI engineering with LangGraph agents, ML engineering with PyTorch, RL and LoRA fine-tuning. Shipping ~30 AI builds a year.",
+    "Roger Oria is a Product Builder and AI Engineer building Polygrow, the AI-native business OS for solopreneurs. Agent systems with LangGraph, ML training with PyTorch, RL and LoRA fine-tuning. Idea → model → product → production.",
   keywords: [
     "Roger Oria",
     "Roger Dev",
-    "AI Founder",
+    "Product Builder",
     "AI Engineer",
     "ML Engineer",
+    "ML enthusiast",
+    "Aspiring Tech Founder",
     "LangGraph",
     "PyTorch",
     "Reinforcement Learning",
@@ -26,30 +28,30 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Tech Entrepreneur",
   ],
-  authors: [{ name: "Roger Oria", url: "https://rogeroria.dev" }],
+  authors: [{ name: "Roger Oria", url: "https://roger-developer.vercel.app" }],
   creator: "Roger Oria",
-  metadataBase: new URL("https://rogeroria.dev"),
+  metadataBase: new URL("https://roger-developer.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rogeroria.dev",
-    siteName: "Roger Oria — AI Founder",
-    title: "Roger Oria — AI Founder | AI Engineer & ML Engineer",
+    url: "https://roger-developer.vercel.app",
+    siteName: "Roger Oria — Product Builder",
+    title: "Roger Oria — Product Builder · AI Engineer / ML enthusiast",
     description:
-      "AI Founder building Polygrow. LangGraph agents, PyTorch training, RL. Idea → model → product → production.",
+      "Product Builder and AI Engineer building Polygrow. LangGraph agents, PyTorch training, RL. Idea → model → product → production.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Roger Oria — AI Founder",
+        alt: "Roger Oria — Product Builder",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roger Oria — AI Founder",
-    description: "AI Founder, AI engineer & ML engineer. Building Polygrow.",
+    title: "Roger Oria — Product Builder",
+    description: "Product Builder, AI Engineer / ML enthusiast. Building Polygrow.",
     images: ["/og-image.jpg"],
   },
   robots: {

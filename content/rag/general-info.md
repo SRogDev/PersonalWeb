@@ -2,7 +2,7 @@
 
 ## Identity
 
-Roger Oria is an AI Founder, AI engineer, and ML engineer. His mission is to become the #1 in AI — a recognized name built in public through shipping. He runs a personal laboratory that ships ~30 AI builds a year, owning the stack from the model (PyTorch training, RL, LoRA fine-tuning) up to the product (LangGraph agents, Next.js). His motto: idea → model → product → production.
+Roger Oria is a Product Builder and AI Engineer / ML enthusiast, aspiring to become a Tech Founder. His mission is to become the #1 in AI — a recognized name built in public through shipping. He builds AI products end to end, owning the stack from the model (PyTorch training, RL, LoRA fine-tuning) up to the product (LangGraph agents, Next.js). His motto: idea → model → product → production.
 
 ## What Roger Does
 
@@ -14,7 +14,7 @@ Polygrow is Roger's flagship — an AI-native business OS for solopreneurs and s
 
 ## Featured Projects
 
-**Polygrow** — AI-native business OS for solopreneurs. Flagship, in active development. Tags: AI Founder, Flagship, Agents.
+**Polygrow** — AI-native business OS for solopreneurs. Flagship, in active development. Tags: Product Builder, Flagship, Agents.
 
 **Rustenwer** — intelligence fabrication & discovery platform: the smallest, cheapest sufficiently-capable intelligence for any problem. CPU PyTorch + LoRA training infra with checkpoints and cost accounting, LangGraph agents, hosted inference. Tags: PyTorch, LoRA, LangGraph. Repo: https://github.com/SRogDev/rustenwer (public).
 
@@ -24,17 +24,17 @@ Polygrow is Roger's flagship — an AI-native business OS for solopreneurs and s
 
 **Agentropy** — observability for AI agents: "See it. Improve it." Open-core (OTel-standard capture open source, insight engine proprietary), LangGraph insight engine, real-data dashboards. Tags: Agents, Observability, LLM. Repo: https://github.com/SRogDev/Agentropy (public).
 
-**DeepBooks** — immersive reading platform: real books, AI-generated momentos, ambient reading experiences. Roger's GenAI showcase. Tags: GenAI, RAG, Next.js. Repo: https://github.com/SRogDev/DeepBooks (public).
+**Reverse Lab** — autonomous reverse engineering and experimental engineering lab for developers. Repo: https://github.com/SRogDev/reverse-lab (public).
 
-More in his pinned GitHub repos — the lab ships ~30 builds a year.
+More in his pinned GitHub repos.
 
 ## Open to Work
 
-Roger is open to work as AI Founder / Co-founder, AI Engineer (agent systems), ML Engineer (training & fine-tuning), AI Product Engineer (0 → 1), building AI MVPs end to end, or advising AI startups.
+Roger is open to work as AI Engineer (agent systems), Product Builder for AI tools, ML Engineer (training & fine-tuning), AI Product Engineer (0 → 1), or AI Founder / Co-founder.
 
 ## Professional Goals
 
-Become the #1 in AI — a recognized name, built in public. Turn Polygrow into a company he can live from. Ship ~30 AI builds a year and open-source the best parts. Help founders ship real AI products, not demos. Core values: AI Agents, Training, Open Source, Entrepreneurship.
+Become the #1 in AI — a recognized name, built in public. Turn Polygrow into a company he can live from. Open-source the best of his work, with code he can defend. Help founders ship real AI products, not demos. Core values: AI Agents, Training, Open Source, Entrepreneurship.
 
 ## Blog
 

@@ -58,6 +58,18 @@
   background: hsl(var(--accent) / 0.5);
 }
 
+/* Respect reduced motion: keep the dark/platinum/cyan look, drop the motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Glow utilities */
 .glow-cyan {
   text-shadow: 0 0 20px hsl(var(--accent) / 0.7), 0 0 40px hsl(var(--accent) / 0.3);

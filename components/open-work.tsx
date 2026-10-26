@@ -5,18 +5,18 @@ import SectionTitle from "./section-title"
 
 export default function OpenWork() {
   const workOptions = [
-    { title: "AI Founder / Co-founder", highlighted: true },
     { title: "AI Engineer — Agent Systems", highlighted: true },
+    { title: "Product Builder — AI Tools", highlighted: true },
     { title: "ML Engineer — Training & Fine-tuning", highlighted: false },
     { title: "AI Product Engineer (0 → 1)", highlighted: false },
+    { title: "AI Founder / Co-founder", highlighted: false },
     { title: "Build AI MVPs End to End", highlighted: false },
-    { title: "Advisor for AI Startups", highlighted: false },
   ]
 
   const professionalGoals = [
     "Become the #1 in AI — a recognized name, built in public",
     "Turn Polygrow into a company I can live from",
-    "Ship ~30 AI builds a year — and open-source the best parts",
+    "Open-source the best of my work, with code I can defend",
     "Help founders ship real AI products, not demos",
   ]
 

@@ -24,7 +24,7 @@ Roger writes technical and product articles. His published and upcoming topics:
 
 ## Collaboration & Hiring
 
-Roger is open to AI Founder / co-founder opportunities, AI Engineer and ML Engineer roles, AI product engineering (0 → 1), building AI MVPs end to end, and advising AI startups. He takes AI products from idea to production solo: model approach, RAG/agent systems, full-stack build, deployment. For fastest response, contact via Telegram.
+Roger is open to AI Engineer roles, Product Builder roles for AI tools, ML Engineer roles, AI product engineering (0 → 1), and AI Founder / co-founder opportunities. He takes AI products from idea to production solo: model approach, RAG/agent systems, full-stack build, deployment. For fastest response, contact via Telegram.
 
 ## Availability
 

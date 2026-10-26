@@ -1,10 +1,9 @@
 import HeroSection from "@/components/hero-section"
 import Experience from "@/components/experience"
-import Education from "@/components/education"
-import Skills from "@/components/skills"
-import Blog from "@/components/blog"
 import Industries from "@/components/industries"
+import Education from "@/components/education"
 import OpenWork from "@/components/open-work"
+import Blog from "@/components/blog"
 import FinalCTA from "@/components/final-cta"
 
 export default function Home() {
@@ -12,11 +11,10 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection />
       <Experience />
-      <Education />
-      <Skills />
-      <Blog />
       <Industries />
+      <Education />
       <OpenWork />
+      <Blog />
       <FinalCTA />
     </main>
   )

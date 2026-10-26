@@ -2,11 +2,11 @@
 
 ## Background
 
-Roger Oria is a young Cuban AI Founder and engineer. He grew up surrounded by real constraints — limited bandwidth, restricted payment gateways, geopolitical barriers — and turned those constraints into a deep intuition for building efficient, resilient software. Building in hard mode taught him more about product-market fit than any accelerator could.
+Roger Oria is a young Cuban Product Builder and AI Engineer. He grew up surrounded by real constraints — limited bandwidth, restricted payment gateways, geopolitical barriers — and turned those constraints into a deep intuition for building efficient, resilient software. Building in hard mode taught him more about product-market fit than any accelerator could.
 
 ## The AI Founder Philosophy
 
-Roger defines himself as an AI Founder: he takes AI products from idea to production solo — the model approach (fine-tuning, RL, or agent orchestration), the full-stack product, and the deployment. He owns the stack from the model up to the product. His mission is to become the #1 in AI, built in public through shipping: a personal laboratory producing ~30 AI builds a year.
+Roger defines himself as a Product Builder: he takes AI products from idea to production solo — the model approach (fine-tuning, RL, or agent orchestration), the full-stack product, and the deployment. He owns the stack from the model up to the product. His mission is to become the #1 in AI, built in public through shipping: a personal laboratory of AI builds, open-sourcing the best parts.
 
 ## Entrepreneurship
 
@@ -22,7 +22,7 @@ Roger wants to become the #1 in AI — the most recognized name in AI, through b
 
 ## Current Focus (2025–2026)
 
-Roger is simultaneously pursuing his Computer Engineering degree at Universidad Máximo Gómez Báez (2024–2027), building Polygrow and his AI laboratory (Rogis, Rustenwer, Domino RL, Agentropy, DeepBooks…), going deep on RL foundations toward agent post-training (RLHF, DPO, RLVR), and writing about AI and product on his blog.
+Roger is simultaneously pursuing his Computer Engineering degree at Universidad Máximo Gómez Báez (2024–2027), building Polygrow and his AI laboratory (Rogis, Rustenwer, Domino RL, Agentropy, Reverse Lab…), going deep on RL foundations toward agent post-training (RLHF, DPO, RLVR), and writing about AI and product on his blog.
 
 ## Fun Facts
 

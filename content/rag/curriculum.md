@@ -3,9 +3,9 @@
 ## Personal Information
 
 Name: Roger Oria
-Role: AI Founder / AI Engineer & ML Engineer
+Role: Product Builder · AI Engineer / ML enthusiast (aspiring Tech Founder)
 Location: Cuba
-Languages: Spanish (Native), English (B2 overall — Writing B2, Listening B2, Speaking B2, Reading C1)
+Languages: Spanish (Native), English (B2)
 
 ## Education
 
@@ -49,7 +49,7 @@ Prototyping, UX Design, Copywriting, Technical Growth Marketing, Viral Loops & G
 
 **Agentropy** — Founder. Observability for AI agents (open-core). Public: https://github.com/SRogDev/Agentropy
 
-**DeepBooks** — Founder. Immersive reading platform with AI-generated momentos. Public: https://github.com/SRogDev/DeepBooks
+**Reverse Lab** — Founder. Autonomous reverse engineering lab. Public: https://github.com/SRogDev/reverse-lab
 
 ## What Roger Can Build
 

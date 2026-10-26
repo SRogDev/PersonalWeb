@@ -1,31 +1,31 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Atom, Coins, Globe, Sparkles } from "lucide-react"
+import { Code2, Layers, Sparkles, HeartPulse } from "lucide-react"
 import SectionTitle from "./section-title"
 
 const industries = [
     {
-        name: "Social Platforms",
-        icon: Globe,
+        name: "Developer / Entrepreneur AI Tools",
+        icon: Code2,
         accent: "from-blue-500/20 to-cyan-400/10",
         ring: "shadow-blue-500/20",
     },
     {
-        name: "Creative Platforms",
-        icon: Sparkles,
+        name: "Platform Development",
+        icon: Layers,
         accent: "from-purple-500/20 to-pink-400/10",
         ring: "shadow-purple-500/20",
     },
     {
-        name: "Fintech",
-        icon: Coins,
+        name: "Interactive Experiences with AI",
+        icon: Sparkles,
         accent: "from-emerald-500/20 to-green-400/10",
         ring: "shadow-emerald-500/20",
     },
     {
-        name: "BioTech",
-        icon: Atom,
+        name: "HealthTech",
+        icon: HeartPulse,
         accent: "from-rose-500/20 to-orange-400/10",
         ring: "shadow-rose-500/20",
     },
@@ -34,7 +34,7 @@ const industries = [
 export default function Industries() {
     return (
         <section className="px-4 sm:px-6 py-16">
-            <SectionTitle className="mb-12">Interested Industries :</SectionTitle>
+            <SectionTitle className="mb-12">Engineering Interests</SectionTitle>
 
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 {industries.map((industry, index) => {
@@ -84,7 +84,7 @@ export default function Industries() {
             </div>
 
             <p className="max-w-5xl mx-auto mt-6 text-center text-xs sm:text-sm text-muted-foreground">
-                I’m ready and excited to build AI that reshapes these industries.
+                The directions I want my next work — and my next role — to go in.
             </p>
         </section>
     )

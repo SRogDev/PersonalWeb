@@ -9,8 +9,16 @@ export default function Experience() {
     {
       title: "Polygrow",
       image: "/covers/polygrow.svg",
+      badge: "Private",
       description: "AI-native business OS for solopreneurs — one environment where agents run the business: ops, marketing, research, analytics. My flagship; in active development.",
-      tags: ["AI Founder", "Flagship", "Agents"],
+      tags: ["Product Builder", "Flagship", "Agents"],
+    },
+    {
+      title: "Reverse Lab",
+      image: "/covers/reverse-lab.svg",
+      link: "https://github.com/SRogDev/reverse-lab",
+      description: "Autonomous reverse engineering and experimental engineering lab for developers: investigate a system, ground every claim in evidence, and reproduce it.",
+      tags: ["Investigation", "Agents", "Evidence"],
     },
     {
       title: "Rustenwer",
@@ -40,22 +48,16 @@ export default function Experience() {
       description: "Observability for AI agents — see it, improve it. Open-core: OTel-standard capture, LangGraph insight engine, real-data dashboards.",
       tags: ["Agents", "Observability", "LLM"],
     },
-    {
-      title: "DeepBooks",
-      image: "/covers/deepbooks.svg",
-      link: "https://github.com/SRogDev/DeepBooks",
-      description: "Immersive reading platform: real books, AI-generated momentos, ambient reading experiences. My GenAI showcase.",
-      tags: ["GenAI", "RAG", "Next.js"],
-    },
   ]
 
   return (
     <motion.section
+      id="projects"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: false }}
-      className="px-4 sm:px-6 py-16"
+      className="px-4 sm:px-6 py-16 scroll-mt-16"
     >
       <SectionTitle className="mb-12">Featured Projects</SectionTitle>
 
@@ -82,8 +84,8 @@ export default function Experience() {
             className="absolute right-0 top-1/2 h-px bg-accent/60"
           />
           <p className="text-muted-foreground text-center px-8 sm:px-12 leading-relaxed text-lg sm:text-xl">
-            As an AI Founder, I build the stack and the product — from training runs to shipped apps.
-            A selection from the lab, which ships ~30 AI builds a year.
+            Six projects, chosen for range: product, agents, systems, and ML training.
+            Each one I can walk through to interview depth — problem, decisions, and what I&apos;d do next.
           </p>
         </div>
       </motion.div>
@@ -101,12 +103,24 @@ export default function Experience() {
               title={project.title}
               image={project.image}
               link={project.link}
+              badge={project.badge}
               description={project.description}
               tags={project.tags}
             />
           </motion.div>
         ))}
       </div>
+
+      <p className="text-center mt-10">
+        <a
+          href="https://github.com/SRogDev?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center min-h-[44px] font-mono text-sm text-muted-foreground hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+        >
+          See all projects on GitHub →
+        </a>
+      </p>
     </motion.section>
   )
 }

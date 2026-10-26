@@ -1,8 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
-import { GraduationCap, Globe, Mic, Eye, Ear, Edit } from "lucide-react"
+import { GraduationCap, Globe } from "lucide-react"
 import EducationCard from "./education-card"
-import SignalBars from "./signal-bars"
 import SectionTitle from "./section-title"
 
 export default function Education() {
@@ -83,47 +82,13 @@ export default function Education() {
           <Globe className="h-8 w-8 md:h-10 md:w-10 text-primary" />
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary">Languages</h3>
         </div>
-        <div className="ml-4 sm:ml-8 space-y-6">
-          {/* Español */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: false }}
-            className="flex items-center justify-between bg-card/30 rounded-lg p-4 border border-border/50"
-          >
-            <div className="flex items-center gap-4">
-              <span className="font-semibold text-foreground text-xl md:text-2xl">Spanish:</span>
-              <span className="text-foreground text-2xl md:text-3xl font-bold">Native</span>
-            </div>
-            <SignalBars level={4} />
-          </motion.div>
-
-          {/* Inglés */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: false }}
-            className="bg-card/30 rounded-lg p-4 border border-border/50"
-          >
-            <h4 className="font-semibold text-foreground text-xl md:text-2xl mb-4">English:</h4>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {([
-                { icon: Edit, label: "Writing", level: 3, cefr: "B2" },
-                { icon: Eye, label: "Reading", level: 4, cefr: "C1" },
-                { icon: Ear, label: "Listening", level: 3, cefr: "B2" },
-                { icon: Mic, label: "Speaking", level: 3, cefr: "B2" },
-              ] as const).map(({ icon: Icon, label, level, cefr }) => (
-                <div key={label} className="flex flex-col items-center gap-2">
-                  <Icon className="h-8 w-8 md:h-10 md:w-10 text-primary" />
-                  <SignalBars level={level} />
-                  <span className="font-mono text-xs font-bold text-accent">{cefr}</span>
-                  <span className="text-xs text-muted-foreground">{label}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+        <div className="ml-4 sm:ml-8 space-y-4">
+          <p className="bg-card/30 rounded-lg p-4 border border-border/50 text-lg sm:text-xl text-foreground">
+            <span className="font-semibold">Spanish:</span> Native
+          </p>
+          <p className="bg-card/30 rounded-lg p-4 border border-border/50 text-lg sm:text-xl text-foreground">
+            <span className="font-semibold">English:</span> B2
+          </p>
         </div>
       </motion.div>
     </motion.section>

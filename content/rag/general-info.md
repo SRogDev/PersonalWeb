@@ -6,25 +6,33 @@ Roger Oria is a Product Builder and AI Engineer / ML enthusiast, aspiring to bec
 
 ## What Roger Does
 
-Roger builds AI products end to end. AI engineering: production agent systems with LangGraph (multi-agent, tools, evals), RAG pipelines, Vercel AI SDK, OpenRouter. ML engineering: PyTorch training — LoRA/QLoRA fine-tuning, reinforcement learning (PPO/MAPPO, self-play), contrastive learning, Unsloth. Product engineering: Next.js, React, FastAPI, Supabase, PostgreSQL, Redis, Tailwind CSS. Languages: Python, TypeScript, Rust.
+Roger builds AI products end to end. AI engineering: production agent systems with LangGraph (multi-agent, tools, evals), RAG pipelines, Vercel AI SDK, OpenRouter. ML engineering: PyTorch training — LoRA/QLoRA fine-tuning, reinforcement learning (PPO/MAPPO, self-play), Unsloth. Product engineering: Next.js, React, FastAPI, Supabase, PostgreSQL, Redis, Tailwind CSS. Languages: Python, TypeScript, Rust.
 
 ## Flagship: Polygrow
 
-Polygrow is Roger's flagship — an AI-native business OS for solopreneurs and small startups: one environment where agents run the business (ops, marketing, research, analytics, code). In active development; intended to become the company he lives from.
+Polygrow is Roger's flagship, in active development. Details on request — it is intentionally kept private.
 
 ## Featured Projects
 
-**Polygrow** — AI-native business OS for solopreneurs. Flagship, in active development. Tags: Product Builder, Flagship, Agents.
+**Polygrow** — Flagship, in active development. Details on request. Tags: Product Builder, Flagship, Agents.
 
-**Rustenwer** — intelligence fabrication & discovery platform: the smallest, cheapest sufficiently-capable intelligence for any problem. CPU PyTorch + LoRA training infra with checkpoints and cost accounting, LangGraph agents, hosted inference. Tags: PyTorch, LoRA, LangGraph. Repo: https://github.com/SRogDev/rustenwer (public).
+**SocialClubs** — Private-community platform for clubs: membership, events, RAG-grounded FAQ and AI digests. Largest Next.js product. Repo: https://github.com/SRogDev/SocialClubs-MVP (public).
 
-**Rogis** — Redis, reimagined for AI agents: a deterministic Redis superset (RESP2/RESP3, snapshot + AOF) with a native semantic engine — first-class vectors, HNSW, SEMSET/SEMGET. Tags: Rust, Redis, Vectors. Repo: https://github.com/SRogDev/rogis (public).
+**DeepBooks** — Immersive reading platform with real pgvector RAG: ask the book you are reading, grounded in its own text. Repo: https://github.com/SRogDev/DeepBooks (public).
 
-**Domino RL** — teaching AI to play Cuban double-9 domino with pure reinforcement learning: zero human heuristics, sparse +1/-1/0 rewards only, MAPPO self-play, progressive curriculum 1v1 → 2v2 teams. Tags: RL, MAPPO, PyTorch. Repo: https://github.com/SRogDev/domino-rl (public).
+**Poetry AI** — Spanish emotional dedications: an Emotion Engine loop — intent, generation, critic, format — on the Vercel AI SDK, with budgets, evals and refunds. Repo: https://github.com/SRogDev/poetry-ai (public).
 
-**Agentropy** — observability for AI agents: "See it. Improve it." Open-core (OTel-standard capture open source, insight engine proprietary), LangGraph insight engine, real-data dashboards. Tags: Agents, Observability, LLM. Repo: https://github.com/SRogDev/Agentropy (public).
+## How Roger learns, in projects
 
-**Reverse Lab** — autonomous reverse engineering and experimental engineering lab for developers. Repo: https://github.com/SRogDev/reverse-lab (public).
+**Petai** — AI digital companion: deterministic systems own needs and time, AI owns decisions and dialogue. Repo: https://github.com/SRogDev/Petai (public).
+
+**Rustenwer** — LangGraph agents, training strategy and evaluation. Repo: https://github.com/SRogDev/rustenwer (public).
+
+**Agentropy** — Observability for AI agents. Repo: https://github.com/SRogDev/Agentropy (public).
+
+**Shield AI** — Security analysis for AI micro-SaaS, with evidence-based findings verified on the next scan. Repo: https://github.com/SRogDev/shield-ai (public).
+
+**Reverse Lab** — Autonomous investigation lab; every claim grounded in evidence or a real experiment. Repo: https://github.com/SRogDev/reverse-lab (public).
 
 More in his pinned GitHub repos.
 

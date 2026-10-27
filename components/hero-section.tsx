@@ -83,6 +83,9 @@ export default function HeroSection() {
         <p className="text-lg sm:text-xl text-muted-foreground">
           AI Engineer / ML enthusiast
         </p>
+        <p className="text-accent italic text-base sm:text-lg mt-3">
+          GitHub is my lab: working code, not claims.
+        </p>
       </motion.div>
 
       <div className="flex flex-col lg:flex-row items-center gap-8 mb-8">

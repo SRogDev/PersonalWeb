@@ -12,16 +12,14 @@ Languages: Spanish (Native), English (B2)
 **Computer Engineering** (2024–2027)
 Universidad Máximo Gómez Báez, Cuba. Currently pursuing a Bachelor's degree in Computer Engineering.
 
-## Certifications
+## Self-taught
 
-- Introduction to Next.js — Coursera Team
-- LangChain for LLM Application Development — DeepLearning.AI
-- Product Management — Universidad de los Andes
+Self-taught engineer. Hundreds of hours studying and building, learning by shipping real products: study a problem, build the smallest working version, and deepen the theory where the product breaks. GitHub is my lab: working code, not claims.
 
 ## Technical Skills
 
 **AI Engineering:** LangGraph, LangChain, Vercel AI SDK, OpenRouter, RAG Pipelines, Agent Evals, Tool Use / MCP, Prompt Engineering.
-**ML Engineering:** PyTorch, LoRA / QLoRA, Reinforcement Learning, PPO / MAPPO, Contrastive Learning, Unsloth, scikit-learn, NumPy, pandas.
+**ML Engineering:** PyTorch, LoRA / QLoRA, Reinforcement Learning, PPO / MAPPO, Unsloth, scikit-learn, NumPy, pandas.
 **Languages:** Python, TypeScript, Rust, JavaScript, SQL.
 **Product Engineering:** Next.js, React, FastAPI, Supabase, PostgreSQL, Redis, Tailwind CSS, Shadcn/ui, Three.js.
 
@@ -39,17 +37,25 @@ Prototyping, UX Design, Copywriting, Technical Growth Marketing, Viral Loops & G
 
 ## Projects
 
-**Polygrow** — Founder. AI-native business OS for solopreneurs; flagship, in active development.
+**Polygrow** — Founder. Flagship, in active development. Details on request. Private.
 
-**Rustenwer** — Founder. Intelligence fabrication platform: CPU PyTorch + LoRA training infra, LangGraph agents, hosted inference. Public: https://github.com/SRogDev/rustenwer
+**SocialClubs** — Founder. Private-community platform for clubs, RAG-grounded FAQ and AI digests. Public: https://github.com/SRogDev/SocialClubs-MVP
 
-**Rogis** — Founder. Redis reimagined for AI agents: deterministic core + native semantic engine (HNSW vectors). Public: https://github.com/SRogDev/rogis
+**DeepBooks** — Founder. Immersive reading platform with real pgvector RAG. Public: https://github.com/SRogDev/DeepBooks
 
-**Domino RL** — Founder. Pure-RL agent for Cuban double-9 domino: zero heuristics, MAPPO self-play. Public: https://github.com/SRogDev/domino-rl
+**Poetry AI** — Founder. Spanish emotional dedications; Emotion Engine loop (intent, generation, critic, format) on the Vercel AI SDK. Public: https://github.com/SRogDev/poetry-ai
 
-**Agentropy** — Founder. Observability for AI agents (open-core). Public: https://github.com/SRogDev/Agentropy
+## How Roger learns, in projects
 
-**Reverse Lab** — Founder. Autonomous reverse engineering lab. Public: https://github.com/SRogDev/reverse-lab
+**Petai** — AI digital companion. Public: https://github.com/SRogDev/Petai
+
+**Rustenwer** — LangGraph agents, training strategy and evaluation. Public: https://github.com/SRogDev/rustenwer
+
+**Agentropy** — Observability for AI agents (open-core). Public: https://github.com/SRogDev/Agentropy
+
+**Shield AI** — Security analysis for AI micro-SaaS. Public: https://github.com/SRogDev/shield-ai
+
+**Reverse Lab** — Autonomous reverse engineering lab. Public: https://github.com/SRogDev/reverse-lab
 
 ## What Roger Can Build
 

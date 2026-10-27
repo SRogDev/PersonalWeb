@@ -18,7 +18,7 @@ export default function Skills() {
   ]
   const mlEngineeringSkills = [
     { name: "PyTorch" }, { name: "LoRA / QLoRA" }, { name: "Reinforcement Learning" },
-    { name: "PPO / MAPPO" }, { name: "Contrastive Learning" }, { name: "Unsloth" },
+    { name: "PPO / MAPPO" }, { name: "Unsloth" },
     { name: "scikit-learn" }, { name: "NumPy" }, { name: "pandas" },
   ]
   const languageSkills = [

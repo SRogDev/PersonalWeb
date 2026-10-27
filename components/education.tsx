@@ -1,24 +1,9 @@
 "use client"
 import { motion } from "framer-motion"
 import { GraduationCap, Globe } from "lucide-react"
-import EducationCard from "./education-card"
 import SectionTitle from "./section-title"
 
 export default function Education() {
-  const certificates = [
-    {
-      course: "Introduction to Next.js",
-      provider: "Coursera Team",
-    },
-    {
-      course: "LangChain for LLM Application Development",
-      provider: "DeepLearning.AI",
-    },
-    {
-      course: "Product Management",
-      provider: "Universidad de los Andes",
-    },
-  ]
 
   return (
     <motion.section
@@ -47,7 +32,7 @@ export default function Education() {
         </div>
       </motion.div>
 
-      {/* Certificados */}
+      {/* Self-taught */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -55,18 +40,46 @@ export default function Education() {
         viewport={{ once: false }}
         className="mb-12"
       >
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-6">Certificates</h3>
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-6">Self-taught</h3>
+        <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed mb-4">
+          Self-taught engineer. Hundreds of hours studying and building, learning by shipping real products:
+          I study a problem, build the smallest working version, and deepen the theory where the product breaks.
+          My projects are the coursework.
+        </p>
+        <p className="text-lg sm:text-xl leading-relaxed">
+          <span className="text-accent italic">GitHub is my lab: working code, not claims.</span>{" "}
+          <a
+            href="https://github.com/SRogDev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline underline-offset-4 hover:text-accent transition-colors inline-flex items-center min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+          >
+            See it on GitHub →
+          </a>
+        </p>
+      </motion.div>
+
+      {/* Learning in public — how I learn, in projects */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.35 }}
+        viewport={{ once: false }}
+        className="mb-12"
+      >
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-6">How I learn, in projects</h3>
         <div className="space-y-4">
-          {certificates.map((cert, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: false }}
-            >
-              <EducationCard course={cert.course} provider={cert.provider} />
-            </motion.div>
+          {[
+            { name: "Petai", link: "https://github.com/SRogDev/Petai", text: "AI digital companion — deterministic systems own needs and time, AI owns decisions and dialogue." },
+            { name: "Rustenwer", link: "https://github.com/SRogDev/rustenwer", text: "LangGraph agents, training strategy and evaluation — judge an intelligence before spending compute on it." },
+            { name: "Agentropy", link: "https://github.com/SRogDev/Agentropy", text: "Observability for AI agents — capture traces, then evaluate the evaluations themselves." },
+            { name: "Shield AI", link: "https://github.com/SRogDev/shield-ai", text: "Security analysis for AI micro-SaaS — findings with evidence, and a fix verified on the next scan." },
+            { name: "Reverse Lab", link: "https://github.com/SRogDev/reverse-lab", text: "Autonomous investigation lab — every claim grounded in evidence or a real experiment." },
+          ].map((p) => (
+            <p key={p.name} className="bg-card/30 rounded-lg p-4 border border-border/50 text-lg sm:text-xl text-foreground leading-relaxed">
+              <a href={p.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline underline-offset-4 hover:text-accent transition-colors inline-flex items-center min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">{p.name}</a>
+              {" — "}{p.text}
+            </p>
           ))}
         </div>
       </motion.div>

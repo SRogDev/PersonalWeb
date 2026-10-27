@@ -10,43 +10,29 @@ export default function Experience() {
       title: "Polygrow",
       image: "/covers/polygrow.svg",
       badge: "Private",
-      description: "AI-native business OS for solopreneurs — one environment where agents run the business: ops, marketing, research, analytics. My flagship; in active development.",
+      description: "My flagship, in active development. Details on request.",
       tags: ["Product Builder", "Flagship", "Agents"],
     },
     {
-      title: "Reverse Lab",
-      image: "/covers/reverse-lab.svg",
-      link: "https://github.com/SRogDev/reverse-lab",
-      description: "Autonomous reverse engineering and experimental engineering lab for developers: investigate a system, ground every claim in evidence, and reproduce it.",
-      tags: ["Investigation", "Agents", "Evidence"],
+      title: "SocialClubs",
+      image: "/covers/socialclubs.svg",
+      link: "https://github.com/SRogDev/SocialClubs-MVP",
+      description: "Private-community platform for clubs: membership, events, RAG-grounded FAQ and AI digests. My largest Next.js product.",
+      tags: ["Next.js", "RAG", "Product"],
     },
     {
-      title: "Rustenwer",
-      image: "/covers/rustenwer.svg",
-      link: "https://github.com/SRogDev/rustenwer",
-      description: "Intelligence fabrication & discovery platform: the smallest, cheapest sufficiently-capable intelligence for any problem. LoRA training infra + LangGraph agents, end to end.",
-      tags: ["PyTorch", "LoRA", "LangGraph"],
+      title: "DeepBooks",
+      image: "/covers/deepbooks.svg",
+      link: "https://github.com/SRogDev/DeepBooks",
+      description: "Immersive reading platform with real pgvector RAG: ask the book you are reading, grounded in its own text.",
+      tags: ["Next.js", "RAG", "pgvector"],
     },
     {
-      title: "Rogis",
-      image: "/covers/rogis.svg",
-      link: "https://github.com/SRogDev/rogis",
-      description: "Redis, reimagined for AI agents: a deterministic Redis superset with a native semantic engine — first-class vectors, HNSW, SEMSET/SEMGET.",
-      tags: ["Rust", "Redis", "Vectors"],
-    },
-    {
-      title: "Domino RL",
-      image: "/covers/domino-rl.svg",
-      link: "https://github.com/SRogDev/domino-rl",
-      description: "Teaching AI to play Cuban double-9 domino with pure reinforcement learning: zero human heuristics, sparse rewards, MAPPO self-play.",
-      tags: ["RL", "MAPPO", "PyTorch"],
-    },
-    {
-      title: "Agentropy",
-      image: "/covers/agentropy.svg",
-      link: "https://github.com/SRogDev/Agentropy",
-      description: "Observability for AI agents — see it, improve it. Open-core: OTel-standard capture, LangGraph insight engine, real-data dashboards.",
-      tags: ["Agents", "Observability", "LLM"],
+      title: "Poetry AI",
+      image: "/covers/poetry-ai.svg",
+      link: "https://github.com/SRogDev/poetry-ai",
+      description: "Spanish emotional dedications: an Emotion Engine loop — intent, generation, critic, format — on the Vercel AI SDK, with budgets, evals and refunds.",
+      tags: ["AI SDK", "Agents", "Evals"],
     },
   ]
 
@@ -84,7 +70,7 @@ export default function Experience() {
             className="absolute right-0 top-1/2 h-px bg-accent/60"
           />
           <p className="text-muted-foreground text-center px-8 sm:px-12 leading-relaxed text-lg sm:text-xl">
-            Six projects, chosen for range: product, agents, systems, and ML training.
+            Four projects, chosen for range: my flagship, my largest product, real RAG, and an agentic loop.
             Each one I can walk through to interview depth — problem, decisions, and what I&apos;d do next.
           </p>
         </div>

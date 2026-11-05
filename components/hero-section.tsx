@@ -105,7 +105,7 @@ export default function HeroSection() {
           <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed mb-6">
             I&apos;m building{" "}
             <span className="text-primary font-semibold">Polygrow</span>, an AI-native business OS for
-            solopreneurs, and I build in public: agent systems with LangGraph, ML training with PyTorch
+            solopreneurs. I work across agent systems with LangGraph, ML training with PyTorch
             and RL, systems in Rust, fine-tuning with Unsloth, and full-stack products with Next.js. Idea → model → product → production.
           </p>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">

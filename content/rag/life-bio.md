@@ -18,7 +18,7 @@ Roger is self-taught in many areas and learns by building real things — "learn
 
 ## Aspirations
 
-Roger wants to become the #1 in AI — the most recognized name in AI, through building in public (open source, writing, talks) and making Polygrow a success, each feeding the other. He wants to prove that geographic constraints breed innovation and that world-class AI can come from anywhere — including Cuba.
+Roger wants to become the #1 in AI — the most recognized name in AI, through building in public (open source, writing, talks) — something he is starting to do, not something he already does — and making Polygrow a success, each feeding the other. He wants to prove that geographic constraints breed innovation and that world-class AI can come from anywhere — including Cuba.
 
 ## Current Focus (2025–2026)
 

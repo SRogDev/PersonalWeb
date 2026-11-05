@@ -69,7 +69,7 @@ export default function HeroSection() {
           viewport={{ once: false }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 leading-tight"
         >
-          I build AI products <span className="text-primary">end to end.</span>
+          Roger Oria
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ export default function HeroSection() {
           viewport={{ once: false }}
           className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary mb-2"
         >
-          Roger Oria — Product Builder
+          Product Builder
         </motion.p>
         <p className="text-lg sm:text-xl text-muted-foreground">
           AI Engineer / ML enthusiast

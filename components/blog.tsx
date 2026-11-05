@@ -49,7 +49,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section className="px-4 sm:px-6 py-16">
+    <section id="writing" className="px-4 sm:px-6 py-16">
       <SectionTitle className="mb-4">Blog</SectionTitle>
       <motion.p
         initial={{ opacity: 0, y: 16 }}

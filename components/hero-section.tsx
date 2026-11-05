@@ -6,6 +6,7 @@ import { FaTelegram, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import Monogram from "./monogram"
+import HeroTerminal from "./hero-terminal"
 
 export default function HeroSection() {
   const handleDownloadCV = () => {
@@ -191,6 +192,20 @@ export default function HeroSection() {
             </a>
           </Button>
         </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.4 }}
+        viewport={{ once: false }}
+        className="mt-10 max-w-2xl mx-auto w-full"
+      >
+        <HeroTerminal />
+        <p className="text-center text-xs text-muted-foreground font-mono mt-2">
+          Try it — type a command. Or press{" "}
+          <kbd className="border border-border rounded px-1">⌘K</kbd> anywhere.
+        </p>
       </motion.div>
     </motion.section>
   )

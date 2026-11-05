@@ -33,7 +33,7 @@ const industries = [
 
 export default function Industries() {
     return (
-        <section className="px-4 sm:px-6 py-16">
+        <section id="industries" className="px-4 sm:px-6 py-16">
             <SectionTitle className="mb-12">Engineering Interests</SectionTitle>
 
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">

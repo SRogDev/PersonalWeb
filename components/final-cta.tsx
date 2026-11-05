@@ -12,6 +12,7 @@ export default function FinalCTA() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
+      id="contact"
       className="px-6 py-16 text-center"
     >
       <motion.div

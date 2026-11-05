@@ -11,6 +11,7 @@ export default function Education() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: false }}
+      id="education"
       className="px-4 sm:px-6 py-16"
     >
       <SectionTitle className="mb-12">Education</SectionTitle>

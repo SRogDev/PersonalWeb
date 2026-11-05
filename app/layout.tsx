@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import FloatingChatButton from "@/components/floating-chat-button"
+import CommandPalette from "@/components/command-palette"
 
 export const metadata: Metadata = {
   title: "Roger Oria — Product Builder · AI Engineer / ML enthusiast",
@@ -73,6 +74,7 @@ export default function RootLayout({
     >
       <body className={GeistSans.className}>
         <FloatingChatButton />
+        <CommandPalette />
         <div className="min-h-screen bg-background relative overflow-hidden">
           {/* Futuristic ambient background */}
           <div className="fixed inset-0 bg-gradient-to-br from-black via-[#040810] to-black" />

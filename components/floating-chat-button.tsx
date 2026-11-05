@@ -22,6 +22,13 @@ export default function FloatingChatButton() {
     return () => clearInterval(interval)
   }, [])
 
+  // ⌘K palette can open the chat: listen for the custom event.
+  useEffect(() => {
+    const openChat = () => setIsChatOpen(true)
+    window.addEventListener("roger:open-chat", openChat)
+    return () => window.removeEventListener("roger:open-chat", openChat)
+  }, [])
+
   const typewriterText = "Want to ask something about Roger?"
 
   return (

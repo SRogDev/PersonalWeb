@@ -21,7 +21,7 @@ export default function OpenWork() {
   ]
 
   return (
-    <section className="px-4 sm:px-6 py-16">
+    <section id="open-work" className="px-4 sm:px-6 py-16">
       <SectionTitle className="mb-12">Open to work in</SectionTitle>
 
       <div className="max-w-3xl mx-auto">

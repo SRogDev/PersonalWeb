@@ -69,7 +69,7 @@ export default function HeroSection() {
           viewport={{ once: false }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 leading-tight"
         >
-          Roger Oria
+          I build AI products <span className="text-primary">end to end.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ export default function HeroSection() {
           viewport={{ once: false }}
           className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary mb-2"
         >
-          Product Builder
+          Roger Oria — Product Builder
         </motion.p>
         <p className="text-lg sm:text-xl text-muted-foreground">
           AI Engineer / ML enthusiast
@@ -97,14 +97,14 @@ export default function HeroSection() {
           className="flex-1"
         >
           <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed mb-6">
-            I build AI products end to end — from the model to production. I&apos;m building{" "}
+            I&apos;m building{" "}
             <span className="text-primary font-semibold">Polygrow</span>, an AI-native business OS for
             solopreneurs, and I build in public: agent systems with LangGraph, ML training with PyTorch
             and RL, systems in Rust, fine-tuning with Unsloth, and full-stack products with Next.js. Idea → model → product → production.
           </p>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            What a recruiter should see first: working code, and projects
-            I can explain to interview depth — not a list of tools.
+            Every project below I can walk through to interview depth — problem, decisions,
+            and what I&apos;d do next. Working code, not a list of tools.
           </p>
           <div className="flex gap-3 justify-center lg:justify-start">
             {[

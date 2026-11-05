@@ -15,7 +15,7 @@ export default function Experience() {
     },
     {
       title: "SocialClubs",
-      image: "/covers/socialclubs.svg",
+      image: "/covers/socialclubs.png",
       link: "https://github.com/SRogDev/SocialClubs-MVP",
       description: "Private-community platform for clubs: membership, events, RAG-grounded FAQ and AI digests. My largest Next.js product.",
       tags: ["Next.js", "RAG", "Product"],
@@ -23,13 +23,13 @@ export default function Experience() {
       caseStudy: {
         problem: "Creators need a private membership club — not another feed — with events, payments and AI help for members.",
         decisions: "Next.js 16 + Supabase, Stripe Connect for payouts, Daily for on-demand video rooms, AI staff with budgets.",
-        evidence: "129 routes, 28 migrations, 48 test files. Payments never verified with real money; live deploy not up yet.",
+        evidence: "129 routes, 28 migrations, 48 test files. Payments never verified with real money; live deploy not up yet. Cover: real UI with demo data (no live backend yet).",
         next: "Real provider keys, a READY live deploy, and a real-money Stripe test.",
       },
     },
     {
       title: "DeepBooks",
-      image: "/covers/deepbooks.svg",
+      image: "/covers/deepbooks.png",
       link: "https://github.com/SRogDev/DeepBooks",
       description: "Immersive reading platform with real pgvector RAG: ask the book you are reading, grounded in its own text.",
       tags: ["Next.js", "RAG", "pgvector"],
@@ -37,13 +37,13 @@ export default function Experience() {
       caseStudy: {
         problem: "Reading without grounding — you forget, you can't ask the book what it actually said.",
         decisions: "pgvector for chunk retrieval, RAG answers grounded in the book's own text, reading-position persistence.",
-        evidence: "Vector extension + match_chunks in migrations, 15 test files. Never exercised with live keys yet.",
+        evidence: "Vector extension + match_chunks in migrations, 15 test files. Never exercised with live keys yet. Cover: real reader UI with a demo book (no live Supabase yet).",
         next: "Supabase project, ingest a real book, run a live RAG answer end to end.",
       },
     },
     {
       title: "Poetry AI",
-      image: "/covers/poetry-ai.svg",
+      image: "/covers/poetry-ai.png",
       link: "https://github.com/SRogDev/poetry-ai",
       description: "Spanish emotional dedications: an Emotion Engine loop — intent, generation, critic, format — on the Vercel AI SDK, with budgets, evals and refunds.",
       tags: ["AI SDK", "Agents", "Evals"],

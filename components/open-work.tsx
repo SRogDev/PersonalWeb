@@ -14,7 +14,7 @@ export default function OpenWork() {
   ]
 
   const professionalGoals = [
-    "Become the #1 in AI — a recognized name, built in public",
+    "Become the #1 in AI — a recognized name in AI",
     "Turn Polygrow into a company I can live from",
     "Open-source the best of my work, with code I can defend",
     "Help founders ship real AI products, not demos",

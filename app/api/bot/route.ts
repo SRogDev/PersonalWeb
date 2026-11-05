@@ -13,14 +13,16 @@ Responde siempre en el mismo idioma de la pregunta.
 CONTEXTO:
 {context}`
 
-// Cheap-model chain for a small RAG bot: start with the cheapest model
-// (gemini-2.5-flash-lite: $0.10/$0.40 per 1M tokens) and fall back to
-// pricier Flash models only when the previous one fails (e.g. overload).
-// The frontend retries with attempt+1 on error, so a saturated model
-// no longer leaves the chat hanging forever.
+// Cheap-model chain for a small RAG bot: start with the cheapest
+// CURRENT model (gemini-3.5-flash-lite: $0.30/$2.50 per 1M tokens) and
+// fall back to pricier Flash models only when the previous one fails
+// (e.g. overload). NOTE: gemini-2.5-flash-lite was tried first but the
+// API now answers "no longer available to new users" — retired for
+// new accounts. The frontend retries with attempt+1 on error, so a
+// saturated model no longer leaves the chat hanging forever.
 const MODEL_CHAIN = [
-  "gemini-2.5-flash-lite",
-  "gemini-2.5-flash",
+  "gemini-3.5-flash-lite",
+  "gemini-3.6-flash",
   "gemini-3.8-flash",
 ] as const
 

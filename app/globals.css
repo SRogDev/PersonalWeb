@@ -94,3 +94,15 @@
 .animate-orbit {
   animation: orbit-spin 36s linear infinite;
 }
+
+/* Platinum sheen: a slow light sweep across platinum gradient text. */
+@keyframes sheen {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-sheen {
+  background-size: 200% auto;
+  animation: sheen 9s ease-in-out infinite;
+}

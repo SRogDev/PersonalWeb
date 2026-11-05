@@ -5,6 +5,13 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 
+interface CaseStudy {
+  problem: string
+  decisions: string
+  evidence: string
+  next: string
+}
+
 interface ProjectCardProps {
   title: string
   image: string
@@ -13,9 +20,13 @@ interface ProjectCardProps {
   tags?: string[]
   /** Shown instead of a link when a project cannot be linked, e.g. "Private". */
   badge?: string
+  /** One-line proof (counts, stack facts) shown under the description. */
+  evidence?: string
+  /** Expandable mini case study: problem → decisions → evidence → next. */
+  caseStudy?: CaseStudy
 }
 
-export default function ProjectCard({ title, image, link, description, tags, badge }: ProjectCardProps) {
+export default function ProjectCard({ title, image, link, description, tags, badge, evidence, caseStudy }: ProjectCardProps) {
   const inner = (
     <Card
       className={`h-full ${link ? "cursor-pointer" : ""} transition-all duration-300 bg-card border-border/60
@@ -56,6 +67,27 @@ export default function ProjectCard({ title, image, link, description, tags, bad
             <p className="text-muted-foreground text-sm leading-relaxed flex-1">
               {description}
             </p>
+          )}
+
+          {evidence && (
+            <p className="text-xs font-mono text-primary/80 leading-relaxed">
+              {evidence}
+            </p>
+          )}
+
+          {caseStudy && (
+            <details className="text-sm group/details">
+              <summary className="cursor-pointer font-mono text-xs text-accent hover:text-accent/80 list-none">
+                <span className="group-open/details:hidden">▸ Case study</span>
+                <span className="hidden group-open/details:inline">▾ Case study</span>
+              </summary>
+              <dl className="mt-2 space-y-1.5 text-muted-foreground leading-relaxed">
+                <div><dt className="inline font-semibold text-foreground">Problem: </dt><dd className="inline">{caseStudy.problem}</dd></div>
+                <div><dt className="inline font-semibold text-foreground">Decisions: </dt><dd className="inline">{caseStudy.decisions}</dd></div>
+                <div><dt className="inline font-semibold text-foreground">Evidence: </dt><dd className="inline">{caseStudy.evidence}</dd></div>
+                <div><dt className="inline font-semibold text-foreground">Next: </dt><dd className="inline">{caseStudy.next}</dd></div>
+              </dl>
+            </details>
           )}
 
           {tags && tags.length > 0 && (

@@ -73,7 +73,7 @@ export default function HeroSection() {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: false }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight text-platinum-gradient"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight text-platinum-gradient animate-sheen"
         >
           Roger Oria
         </motion.h1>

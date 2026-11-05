@@ -19,6 +19,13 @@ export default function Experience() {
       link: "https://github.com/SRogDev/SocialClubs-MVP",
       description: "Private-community platform for clubs: membership, events, RAG-grounded FAQ and AI digests. My largest Next.js product.",
       tags: ["Next.js", "RAG", "Product"],
+      evidence: "129 routes · 28 Supabase migrations · Stripe Connect · Daily video",
+      caseStudy: {
+        problem: "Creators need a private membership club — not another feed — with events, payments and AI help for members.",
+        decisions: "Next.js 16 + Supabase, Stripe Connect for payouts, Daily for on-demand video rooms, AI staff with budgets.",
+        evidence: "129 routes, 28 migrations, 48 test files. Payments never verified with real money; live deploy not up yet.",
+        next: "Real provider keys, a READY live deploy, and a real-money Stripe test.",
+      },
     },
     {
       title: "DeepBooks",
@@ -26,6 +33,13 @@ export default function Experience() {
       link: "https://github.com/SRogDev/DeepBooks",
       description: "Immersive reading platform with real pgvector RAG: ask the book you are reading, grounded in its own text.",
       tags: ["Next.js", "RAG", "pgvector"],
+      evidence: "Real pgvector RAG in code · 15 test files · migrations 001–003",
+      caseStudy: {
+        problem: "Reading without grounding — you forget, you can't ask the book what it actually said.",
+        decisions: "pgvector for chunk retrieval, RAG answers grounded in the book's own text, reading-position persistence.",
+        evidence: "Vector extension + match_chunks in migrations, 15 test files. Never exercised with live keys yet.",
+        next: "Supabase project, ingest a real book, run a live RAG answer end to end.",
+      },
     },
     {
       title: "Poetry AI",
@@ -33,6 +47,13 @@ export default function Experience() {
       link: "https://github.com/SRogDev/poetry-ai",
       description: "Spanish emotional dedications: an Emotion Engine loop — intent, generation, critic, format — on the Vercel AI SDK, with budgets, evals and refunds.",
       tags: ["AI SDK", "Agents", "Evals"],
+      evidence: "Emotion Engine · 16 test files · CI · rose budgets, evals, refunds",
+      caseStudy: {
+        problem: "Generic AI text feels cold — a dedication should carry real emotion and survive a critic.",
+        decisions: "Emotion Engine loop (intent → generation → critic → format), rose budgets with refunds, evals on every step.",
+        evidence: "16 test files, CI green. AI paths mock-verified only so far — no live generation with real credits yet.",
+        next: "A live generated dedication with the full loop, on real OpenRouter credits.",
+      },
     },
   ]
 
@@ -92,6 +113,8 @@ export default function Experience() {
               badge={project.badge}
               description={project.description}
               tags={project.tags}
+              evidence={project.evidence}
+              caseStudy={project.caseStudy}
             />
           </motion.div>
         ))}

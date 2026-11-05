@@ -23,6 +23,8 @@ const MODEL_CHAIN = [
   "gemini-2.5-flash",
   "gemini-3.8-flash",
 ] as const
+
+interface RagVector {
   id: string
   source: string
   text: string

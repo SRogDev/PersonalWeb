@@ -103,7 +103,7 @@ export default function HeroSection() {
             and RL, systems in Rust, fine-tuning with Unsloth, and full-stack products with Next.js. Idea → model → product → production.
           </p>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            What a recruiter should see first: working code, live demos where they exist, and projects
+            What a recruiter should see first: working code, and projects
             I can explain to interview depth — not a list of tools.
           </p>
           <div className="flex gap-3 justify-center lg:justify-start">

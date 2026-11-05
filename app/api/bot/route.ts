@@ -13,7 +13,16 @@ Responde siempre en el mismo idioma de la pregunta.
 CONTEXTO:
 {context}`
 
-interface RagVector {
+// Cheap-model chain for a small RAG bot: start with the cheapest model
+// (gemini-2.5-flash-lite: $0.10/$0.40 per 1M tokens) and fall back to
+// pricier Flash models only when the previous one fails (e.g. overload).
+// The frontend retries with attempt+1 on error, so a saturated model
+// no longer leaves the chat hanging forever.
+const MODEL_CHAIN = [
+  "gemini-2.5-flash-lite",
+  "gemini-2.5-flash",
+  "gemini-3.8-flash",
+] as const
   id: string
   source: string
   text: string
@@ -82,7 +91,12 @@ export async function POST(request: Request) {
     )
   }
 
-  const { messages } = (await request.json()) as { messages: UIMessage[] }
+  const { messages, attempt = 0 } = (await request.json()) as {
+    messages: UIMessage[]
+    attempt?: number
+  }
+  const modelId =
+    MODEL_CHAIN[Math.min(Math.max(attempt, 0), MODEL_CHAIN.length - 1)]
   const lastUserMessage = [...messages].reverse().find((m) => m.role === "user")
 
   let context = ""
@@ -102,7 +116,12 @@ export async function POST(request: Request) {
   }
 
   const result = streamText({
-    model: google("gemini-3.8-flash"),
+    // Thinking LOW: this is short RAG Q&A, not deep reasoning —
+    // faster answers and far less load on the model.
+    model: google(modelId, { thinkingConfig: { thinkingLevel: "low" } }),
+    // Default retries (2) turned a 15s overload into a ~55s hang.
+    // One retry is enough; the frontend falls back to the next model.
+    maxRetries: 1,
     system: SYSTEM_PROMPT.replace("{context}", context || "No context available."),
     messages: await convertToModelMessages(messages),
   })

@@ -18,7 +18,16 @@ interface ChatState {
   messages: UIMessage[]
   sendMessage: (message: { text: string }) => void
   status: "submitted" | "streaming" | "ready" | "error"
+  error: Error | undefined
+  regenerate: () => void
+  clearError: () => void
 }
+
+const SUGGESTED_QUESTIONS = [
+  "Does Roger know Next.js?",
+  "What is Polygrow?",
+  "What has Roger built with LangGraph?",
+]
 
 function messageText(message: UIMessage): string {
   return message.parts
@@ -29,9 +38,16 @@ function messageText(message: UIMessage): string {
 
 export default function AIChat({ isOpen, onClose }: AIChatProps) {
   const [input, setInput] = useState("")
-  const { messages, sendMessage, status } = useChat({
-    transport: new DefaultChatTransport({ api: "/api/bot" }),
-  }) as unknown as ChatState
+  // Which model in the server's cheap-model chain this attempt uses.
+  // 0 = gemini-2.5-flash-lite, then pricier Flash fallbacks on error.
+  const attemptRef = useRef(0)
+  const { messages, sendMessage, status, error, regenerate, clearError } =
+    useChat({
+      transport: new DefaultChatTransport({
+        api: "/api/bot",
+        body: () => ({ attempt: attemptRef.current }),
+      }),
+    }) as unknown as ChatState
 
   const isLoading = status === "submitted" || status === "streaming"
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
@@ -43,8 +59,16 @@ export default function AIChat({ isOpen, onClose }: AIChatProps) {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
     if (!input.trim() || isLoading) return
+    attemptRef.current = 0 // fresh question starts at the cheapest model
     sendMessage({ text: input })
     setInput("")
+  }
+
+  const handleRetry = () => {
+    // Next attempt uses the next model in the chain (max 2, then wraps).
+    attemptRef.current = (attemptRef.current + 1) % 3
+    clearError()
+    regenerate()
   }
 
   return (
@@ -73,9 +97,26 @@ export default function AIChat({ isOpen, onClose }: AIChatProps) {
                 style={{ wordBreak: "break-word" }}
               >
                 {messages.length === 0 && (
-                  <p className="text-xs text-muted-foreground font-mono text-center pt-8">
-                    Ask anything about Roger&apos;s work, skills, or projects.
-                  </p>
+                  <div className="pt-6 space-y-2">
+                    <p className="text-xs text-muted-foreground font-mono text-center">
+                      Ask anything about Roger&apos;s work, skills, or projects.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 justify-center">
+                      {SUGGESTED_QUESTIONS.map((q) => (
+                        <button
+                          key={q}
+                          type="button"
+                          onClick={() => {
+                            attemptRef.current = 0
+                            sendMessage({ text: q })
+                          }}
+                          className="text-[11px] font-mono px-2 py-1 rounded-full border border-accent/30 text-accent hover:bg-accent/10 transition-colors"
+                        >
+                          {q}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 )}
                 {messages.map((message) => (
                   <motion.div
@@ -102,6 +143,24 @@ export default function AIChat({ isOpen, onClose }: AIChatProps) {
                       <span className="animate-bounce" style={{ animationDelay: "150ms" }}>·</span>
                       <span className="animate-bounce" style={{ animationDelay: "300ms" }}>·</span>
                     </span>
+                  </motion.div>
+                )}
+                {status === "error" && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="bg-muted/60 text-muted-foreground p-2.5 rounded-lg text-sm mr-auto max-w-[85%]"
+                  >
+                    <p>
+                      The AI is busy right now — I&apos;ll try a backup model.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleRetry}
+                      className="mt-1.5 text-xs font-mono px-2 py-1 rounded-full border border-accent/30 text-accent hover:bg-accent/10 transition-colors"
+                    >
+                      Retry
+                    </button>
                   </motion.div>
                 )}
                 <div ref={messagesEndRef} />

@@ -78,3 +78,19 @@
 .border-glow-cyan {
   box-shadow: 0 0 0 1px hsl(var(--accent) / 0.4), 0 0 24px hsl(var(--accent) / 0.12);
 }
+/* Platinum: Roger's metal. Headline gradient + slow orbit. */
+.text-platinum-gradient {
+  background: linear-gradient(180deg, #f4f5f7 0%, #d7dae0 45%, #9aa1ac 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-orbit {
+  animation: orbit-spin 36s linear infinite;
+}

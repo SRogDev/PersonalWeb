@@ -5,6 +5,7 @@ import { Download, ArrowDown } from "lucide-react"
 import { FaTelegram, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Monogram from "./monogram"
 
 export default function HeroSection() {
   const handleDownloadCV = () => {
@@ -23,6 +24,10 @@ export default function HeroSection() {
       viewport={{ once: false }}
       className="px-4 sm:px-6 py-16 md:py-24 relative overflow-hidden"
     >
+      {/* Signature seal: small and quiet, top-left — the photo stays the hero. */}
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 opacity-80">
+        <Monogram size={36} />
+      </div>
       {/* Elementos decorativos futuristas */}
       <motion.div
         aria-hidden="true"
@@ -67,7 +72,7 @@ export default function HeroSection() {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: false }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 leading-tight"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight text-platinum-gradient"
         >
           Roger Oria
         </motion.h1>
@@ -140,13 +145,20 @@ export default function HeroSection() {
           className="flex-shrink-0"
         >
           <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-            <Image
-              src="/Roger.webp?height=200&width=200"
-              alt="Roger Oria"
-              width={200}
-              height={200}
-              className="rounded-full border-2 border-accent shadow-lg shadow-accent/20"
-            />
+            <div className="relative">
+              {/* Thin platinum orbit around the photo, one cyan satellite. */}
+              <div className="absolute -inset-3 rounded-full border border-primary/25" />
+              <div className="absolute -inset-3 rounded-full animate-orbit">
+                <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-accent shadow-[0_0_10px_2px_rgba(0,229,255,0.6)]" />
+              </div>
+              <Image
+                src="/Roger.webp?height=200&width=200"
+                alt="Roger Oria"
+                width={200}
+                height={200}
+                className="rounded-full border-2 border-primary/40 shadow-lg shadow-black/50"
+              />
+            </div>
           </motion.div>
         </motion.div>
       </div>
@@ -161,7 +173,7 @@ export default function HeroSection() {
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             onClick={handleDownloadCV}
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:shadow-xl transition-all duration-300 min-h-[44px]"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg shadow-lg shadow-black/40 transition-all duration-300 min-h-[44px]"
           >
             <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
             Download CV

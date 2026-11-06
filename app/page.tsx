@@ -3,7 +3,6 @@ import Experience from "@/components/experience"
 import Industries from "@/components/industries"
 import Education from "@/components/education"
 import OpenWork from "@/components/open-work"
-import Blog from "@/components/blog"
 import FinalCTA from "@/components/final-cta"
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <Industries />
       <Education />
       <OpenWork />
-      <Blog />
       <FinalCTA />
     </main>
   )

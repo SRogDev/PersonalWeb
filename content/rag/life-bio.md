@@ -22,7 +22,7 @@ Roger wants to become the #1 in AI — the most recognized name in AI, through b
 
 ## Current Focus (2025–2026)
 
-Roger is simultaneously pursuing his Computer Engineering degree at Universidad Máximo Gómez Báez (2024–2027), building Polygrow and his AI laboratory (Rogis, Rustenwer, Domino RL, Agentropy, Reverse Lab…), going deep on RL foundations toward agent post-training (RLHF, DPO, RLVR), and writing about AI and product on his blog.
+Roger is simultaneously pursuing his Computer Engineering degree at Universidad Máximo Gómez Báez (2024–2027), building Polygrow and his AI laboratory (Rogis, Rustenwer, Domino RL, Agentropy, Reverse Lab…), going deep on RL foundations toward agent post-training (RLHF, DPO, RLVR).
 
 ## Fun Facts
 

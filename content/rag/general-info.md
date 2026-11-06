@@ -44,10 +44,6 @@ Roger is open to work as AI Engineer (agent systems), Product Builder for AI too
 
 Become the #1 in AI — a recognized name, built in public. Turn Polygrow into a company he can live from. Open-source the best of his work, with code he can defend. Help founders ship real AI products, not demos. Core values: AI Agents, Training, Open Source, Entrepreneurship.
 
-## Blog
-
-Roger writes about software, AI, product, and growth. His published articles include: Social Media with Jamstack Architecture, How to reach 100 million MAU from Cuba with an app, The Future of Freelance Searching on the Internet, Catching the Neurochemicals, The Insane of Self-hosted MLOps.
-
 ## Contact
 
 The best way to contact Roger is via Telegram at <https://t.me/@Rogeroria>. He is also on Instagram at @rogeroriag and on LinkedIn at <https://www.linkedin.com/in/roger-oria-aa6179301>.
